@@ -8,6 +8,7 @@
 from typing import Tuple
 from enum import Enum
 from dataclasses import dataclass
+from pruned_model import PruneModel
 
 import colorama
 import datetime
@@ -18,6 +19,7 @@ import traceback
 import transformers
 import os
 
+from data import DatasetFormat
 from arguments import Arguments, simple_parse_args_string
 from self_speculation.autoregressive_generator import AutoRegressiveGenerationStrategy
 from self_speculation.generator_base import (
@@ -62,6 +64,10 @@ def load_model_and_tokenizer(args: Arguments, device: str = "auto"):
         device_map="auto",
         torch_dtype=torch.float16,
     )
+    #DatasetFormat.datasetyouneed
+    prune_model = PruneModel(model, args, DatasetFormat.CNN_DM_SUMMARIZATION)
+    new_model_dict = prune_model.prune_state_dict(prefix="blocks", n=1)
+    """
     new_model_dict = {}
     for k, v in model.state_dict().items():
         dropout_probability = random.uniform(0, 1)
@@ -70,7 +76,7 @@ def load_model_and_tokenizer(args: Arguments, device: str = "auto"):
             new_model_dict[k] = v
         else:
             print("Dropping layer ", k)
-    
+    """
     model.load_state_dict(new_model_dict, strict=False)
     model.eval()
 
