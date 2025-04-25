@@ -236,7 +236,7 @@ def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_co
     model, tokenizer = load_model_and_tokenizer(args, device=device)
     #call PruneModel to prune model's state_dict
     prune_model = PruneModel(model, evaluation_set, n=3)
-    new_model_dict = prune_model.prune_state_dict(prefix="blocks")
+    new_model_dict = prune_model.prune_state_dict(prefix="self_attn")
     model.load_state_dict(new_model_dict, strict=False)
     model.eval()
 

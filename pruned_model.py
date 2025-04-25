@@ -67,7 +67,7 @@ class PruneModel:
             avg_dist.append(self.angular_distance(a, b).mean().item() )
         return int(torch.tensor(avg_dist).argmin().item())
 
-    def prune_state_dict(self, prefix="blocks"):
+    def prune_state_dict(self, prefix="self_attn"):
         pat = re.compile(rf"{prefix}\.(\d+)\.")
         sd = self.model.state_dict()
         new_sd = {}
