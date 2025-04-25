@@ -1,0 +1,795 @@
+---------------------------------------
+Begin Slurm Prolog: Mar-28-2025 12:51:26
+Job ID:    2381587
+User ID:   mtalreja6
+Account:   coc
+Job name:  LayerSkipWithLayerDrop
+Partition: ice-gpu
+QOS:       coc-ice
+---------------------------------------
+/var/lib/slurm/slurmd/job2381587/slurm_script: line 14: huggingface-cli: command not found
+/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/python
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    return f(*args, **kwargs)
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    result = agent.run()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    result = agent.run()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = agent.run()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = self._invoke_run(role)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = self._invoke_run(role)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    result = self._invoke_run(role)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._rendezvous(worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+    self._rendezvous(worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+    self._rendezvous(worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._store = TCPStore(  # type: ignore[call-arg]
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+srun: error: atl1-1-03-012-28-0: tasks 0-2: Exited with exit code 1
+/home/hice1/mtalreja6/.local/lib/python3.10/site-packages/torchvision/io/image.py:14: UserWarning: Failed to load image Python extension: '/home/hice1/mtalreja6/.local/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN2at4_ops9from_file4callESt17basic_string_viewIcSt11char_traitsIcEESt8optionalIbES6_IlES6_IN3c1010ScalarTypeEES6_INS9_6LayoutEES6_INS9_6DeviceEES7_'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+2025-03-28:12:51:42,591 INFO     [modeling.py:1014] We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:04,  2.07s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:04<00:02,  2.08s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:05<00:00,  1.83s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:05<00:00,  1.90s/it]
+Dropout probability for layer  model.embed_tokens.weight  is  0.6394267984578837
+Dropout probability for layer  model.layers.0.self_attn.q_proj.weight  is  0.025010755222666936
+Dropping layer  model.layers.0.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.0.self_attn.k_proj.weight  is  0.27502931836911926
+Dropping layer  model.layers.0.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.0.self_attn.v_proj.weight  is  0.22321073814882275
+Dropping layer  model.layers.0.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.0.self_attn.o_proj.weight  is  0.7364712141640124
+Dropout probability for layer  model.layers.0.mlp.gate_proj.weight  is  0.6766994874229113
+Dropout probability for layer  model.layers.0.mlp.up_proj.weight  is  0.8921795677048454
+Dropout probability for layer  model.layers.0.mlp.down_proj.weight  is  0.08693883262941615
+Dropout probability for layer  model.layers.0.input_layernorm.weight  is  0.4219218196852704
+Dropout probability for layer  model.layers.0.post_attention_layernorm.weight  is  0.029797219438070344
+Dropout probability for layer  model.layers.1.self_attn.q_proj.weight  is  0.21863797480360336
+Dropping layer  model.layers.1.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.1.self_attn.k_proj.weight  is  0.5053552881033624
+Dropout probability for layer  model.layers.1.self_attn.v_proj.weight  is  0.026535969683863625
+Dropping layer  model.layers.1.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.1.self_attn.o_proj.weight  is  0.1988376506866485
+Dropping layer  model.layers.1.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.1.mlp.gate_proj.weight  is  0.6498844377795232
+Dropout probability for layer  model.layers.1.mlp.up_proj.weight  is  0.5449414806032167
+Dropout probability for layer  model.layers.1.mlp.down_proj.weight  is  0.2204406220406967
+Dropout probability for layer  model.layers.1.input_layernorm.weight  is  0.5892656838759087
+Dropout probability for layer  model.layers.1.post_attention_layernorm.weight  is  0.8094304566778266
+Dropout probability for layer  model.layers.2.self_attn.q_proj.weight  is  0.006498759678061017
+Dropping layer  model.layers.2.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.2.self_attn.k_proj.weight  is  0.8058192518328079
+Dropout probability for layer  model.layers.2.self_attn.v_proj.weight  is  0.6981393949882269
+Dropout probability for layer  model.layers.2.self_attn.o_proj.weight  is  0.3402505165179919
+Dropping layer  model.layers.2.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.2.mlp.gate_proj.weight  is  0.15547949981178155
+Dropout probability for layer  model.layers.2.mlp.up_proj.weight  is  0.9572130722067812
+Dropout probability for layer  model.layers.2.mlp.down_proj.weight  is  0.33659454511262676
+Dropout probability for layer  model.layers.2.input_layernorm.weight  is  0.09274584338014791
+Dropout probability for layer  model.layers.2.post_attention_layernorm.weight  is  0.09671637683346401
+Dropout probability for layer  model.layers.3.self_attn.q_proj.weight  is  0.8474943663474598
+Dropout probability for layer  model.layers.3.self_attn.k_proj.weight  is  0.6037260313668911
+Dropout probability for layer  model.layers.3.self_attn.v_proj.weight  is  0.8071282732743802
+Dropout probability for layer  model.layers.3.self_attn.o_proj.weight  is  0.7297317866938179
+Dropout probability for layer  model.layers.3.mlp.gate_proj.weight  is  0.5362280914547007
+Dropout probability for layer  model.layers.3.mlp.up_proj.weight  is  0.9731157639793706
+Dropout probability for layer  model.layers.3.mlp.down_proj.weight  is  0.3785343772083535
+Dropout probability for layer  model.layers.3.input_layernorm.weight  is  0.552040631273227
+Dropout probability for layer  model.layers.3.post_attention_layernorm.weight  is  0.8294046642529949
+Dropout probability for layer  model.layers.4.self_attn.q_proj.weight  is  0.6185197523642461
+Dropout probability for layer  model.layers.4.self_attn.k_proj.weight  is  0.8617069003107772
+Dropout probability for layer  model.layers.4.self_attn.v_proj.weight  is  0.577352145256762
+Dropout probability for layer  model.layers.4.self_attn.o_proj.weight  is  0.7045718362149235
+Dropout probability for layer  model.layers.4.mlp.gate_proj.weight  is  0.045824383655662215
+Dropout probability for layer  model.layers.4.mlp.up_proj.weight  is  0.22789827565154686
+Dropout probability for layer  model.layers.4.mlp.down_proj.weight  is  0.28938796360210717
+Dropout probability for layer  model.layers.4.input_layernorm.weight  is  0.0797919769236275
+Dropout probability for layer  model.layers.4.post_attention_layernorm.weight  is  0.23279088636103018
+Dropout probability for layer  model.layers.5.self_attn.q_proj.weight  is  0.10100142940972912
+Dropping layer  model.layers.5.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.5.self_attn.k_proj.weight  is  0.2779736031100921
+Dropping layer  model.layers.5.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.5.self_attn.v_proj.weight  is  0.6356844442644002
+Dropout probability for layer  model.layers.5.self_attn.o_proj.weight  is  0.36483217897008424
+Dropping layer  model.layers.5.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.5.mlp.gate_proj.weight  is  0.37018096711688264
+Dropout probability for layer  model.layers.5.mlp.up_proj.weight  is  0.2095070307714877
+Dropout probability for layer  model.layers.5.mlp.down_proj.weight  is  0.26697782204911336
+Dropout probability for layer  model.layers.5.input_layernorm.weight  is  0.936654587712494
+Dropout probability for layer  model.layers.5.post_attention_layernorm.weight  is  0.6480353852465935
+Dropout probability for layer  model.layers.6.self_attn.q_proj.weight  is  0.6091310056669882
+Dropout probability for layer  model.layers.6.self_attn.k_proj.weight  is  0.171138648198097
+Dropping layer  model.layers.6.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.6.self_attn.v_proj.weight  is  0.7291267979503492
+Dropout probability for layer  model.layers.6.self_attn.o_proj.weight  is  0.1634024937619284
+Dropping layer  model.layers.6.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.6.mlp.gate_proj.weight  is  0.3794554417576478
+Dropout probability for layer  model.layers.6.mlp.up_proj.weight  is  0.9895233506365952
+Dropout probability for layer  model.layers.6.mlp.down_proj.weight  is  0.6399997598540929
+Dropout probability for layer  model.layers.6.input_layernorm.weight  is  0.5569497437746462
+Dropout probability for layer  model.layers.6.post_attention_layernorm.weight  is  0.6846142509898746
+Dropout probability for layer  model.layers.7.self_attn.q_proj.weight  is  0.8428519201898096
+Dropout probability for layer  model.layers.7.self_attn.k_proj.weight  is  0.7759999115462448
+Dropout probability for layer  model.layers.7.self_attn.v_proj.weight  is  0.22904807196410437
+Dropping layer  model.layers.7.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.7.self_attn.o_proj.weight  is  0.03210024390403776
+Dropping layer  model.layers.7.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.7.mlp.gate_proj.weight  is  0.3154530480590819
+Dropout probability for layer  model.layers.7.mlp.up_proj.weight  is  0.26774087597570273
+Dropout probability for layer  model.layers.7.mlp.down_proj.weight  is  0.21098284358632646
+Dropout probability for layer  model.layers.7.input_layernorm.weight  is  0.9429097143350544
+Dropout probability for layer  model.layers.7.post_attention_layernorm.weight  is  0.8763676264726689
+Dropout probability for layer  model.layers.8.self_attn.q_proj.weight  is  0.3146778807984779
+Dropping layer  model.layers.8.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.8.self_attn.k_proj.weight  is  0.65543866529488
+Dropout probability for layer  model.layers.8.self_attn.v_proj.weight  is  0.39563190106066426
+Dropping layer  model.layers.8.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.8.self_attn.o_proj.weight  is  0.9145475897405435
+Dropout probability for layer  model.layers.8.mlp.gate_proj.weight  is  0.4588518525873988
+Dropout probability for layer  model.layers.8.mlp.up_proj.weight  is  0.26488016649805246
+Dropout probability for layer  model.layers.8.mlp.down_proj.weight  is  0.24662750769398345
+Dropout probability for layer  model.layers.8.input_layernorm.weight  is  0.5613681341631508
+Dropout probability for layer  model.layers.8.post_attention_layernorm.weight  is  0.26274160852293527
+Dropout probability for layer  model.layers.9.self_attn.q_proj.weight  is  0.5845859902235405
+Dropout probability for layer  model.layers.9.self_attn.k_proj.weight  is  0.897822883602477
+Dropout probability for layer  model.layers.9.self_attn.v_proj.weight  is  0.39940050514039727
+Dropping layer  model.layers.9.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.9.self_attn.o_proj.weight  is  0.21932075915728333
+Dropping layer  model.layers.9.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.9.mlp.gate_proj.weight  is  0.9975376064951103
+Dropout probability for layer  model.layers.9.mlp.up_proj.weight  is  0.5095262936764645
+Dropout probability for layer  model.layers.9.mlp.down_proj.weight  is  0.09090941217379389
+Dropout probability for layer  model.layers.9.input_layernorm.weight  is  0.04711637542473457
+Dropout probability for layer  model.layers.9.post_attention_layernorm.weight  is  0.10964913035065915
+Dropout probability for layer  model.layers.10.self_attn.q_proj.weight  is  0.62744604170309
+Dropout probability for layer  model.layers.10.self_attn.k_proj.weight  is  0.7920793643629641
+Dropout probability for layer  model.layers.10.self_attn.v_proj.weight  is  0.42215996679968404
+Dropping layer  model.layers.10.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.10.self_attn.o_proj.weight  is  0.06352770615195713
+Dropping layer  model.layers.10.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.10.mlp.gate_proj.weight  is  0.38161928650653676
+Dropout probability for layer  model.layers.10.mlp.up_proj.weight  is  0.9961213802400968
+Dropout probability for layer  model.layers.10.mlp.down_proj.weight  is  0.529114345099137
+Dropout probability for layer  model.layers.10.input_layernorm.weight  is  0.9710783776136181
+Dropout probability for layer  model.layers.10.post_attention_layernorm.weight  is  0.8607797022344981
+Dropout probability for layer  model.layers.11.self_attn.q_proj.weight  is  0.011481021942819636
+Dropping layer  model.layers.11.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.11.self_attn.k_proj.weight  is  0.7207218193601946
+Dropout probability for layer  model.layers.11.self_attn.v_proj.weight  is  0.6817103690265748
+Dropout probability for layer  model.layers.11.self_attn.o_proj.weight  is  0.5369703304087952
+Dropout probability for layer  model.layers.11.mlp.gate_proj.weight  is  0.2668251899525428
+Dropout probability for layer  model.layers.11.mlp.up_proj.weight  is  0.6409617985798081
+Dropout probability for layer  model.layers.11.mlp.down_proj.weight  is  0.11155217359587644
+Dropout probability for layer  model.layers.11.input_layernorm.weight  is  0.434765250669105
+Dropout probability for layer  model.layers.11.post_attention_layernorm.weight  is  0.45372370632920644
+Dropout probability for layer  model.layers.12.self_attn.q_proj.weight  is  0.9538159275210801
+Dropout probability for layer  model.layers.12.self_attn.k_proj.weight  is  0.8758529403781941
+Dropout probability for layer  model.layers.12.self_attn.v_proj.weight  is  0.26338905075109076
+Dropping layer  model.layers.12.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.12.self_attn.o_proj.weight  is  0.5005861130502983
+Dropout probability for layer  model.layers.12.mlp.gate_proj.weight  is  0.17865188053013137
+Dropout probability for layer  model.layers.12.mlp.up_proj.weight  is  0.9126278393448205
+Dropout probability for layer  model.layers.12.mlp.down_proj.weight  is  0.8705185698367669
+Dropout probability for layer  model.layers.12.input_layernorm.weight  is  0.2984447914486329
+Dropout probability for layer  model.layers.12.post_attention_layernorm.weight  is  0.6389494948660052
+Dropout probability for layer  model.layers.13.self_attn.q_proj.weight  is  0.6089702114381723
+Dropout probability for layer  model.layers.13.self_attn.k_proj.weight  is  0.1528392685496348
+Dropping layer  model.layers.13.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.13.self_attn.v_proj.weight  is  0.7625108000751513
+Dropout probability for layer  model.layers.13.self_attn.o_proj.weight  is  0.5393790301196257
+Dropout probability for layer  model.layers.13.mlp.gate_proj.weight  is  0.7786264786305582
+Dropout probability for layer  model.layers.13.mlp.up_proj.weight  is  0.5303536721951775
+Dropout probability for layer  model.layers.13.mlp.down_proj.weight  is  0.0005718961279435053
+Dropout probability for layer  model.layers.13.input_layernorm.weight  is  0.3241560570046731
+Dropout probability for layer  model.layers.13.post_attention_layernorm.weight  is  0.019476742385832302
+Dropout probability for layer  model.layers.14.self_attn.q_proj.weight  is  0.9290986162646171
+Dropout probability for layer  model.layers.14.self_attn.k_proj.weight  is  0.8787218778231842
+Dropout probability for layer  model.layers.14.self_attn.v_proj.weight  is  0.8316655293611794
+Dropout probability for layer  model.layers.14.self_attn.o_proj.weight  is  0.30751412540266143
+Dropping layer  model.layers.14.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.14.mlp.gate_proj.weight  is  0.05792516649418755
+Dropout probability for layer  model.layers.14.mlp.up_proj.weight  is  0.8780095992040405
+Dropout probability for layer  model.layers.14.mlp.down_proj.weight  is  0.9469494452979941
+Dropout probability for layer  model.layers.14.input_layernorm.weight  is  0.08565345206787878
+Dropout probability for layer  model.layers.14.post_attention_layernorm.weight  is  0.4859904633166138
+Dropout probability for layer  model.layers.15.self_attn.q_proj.weight  is  0.06921251846838361
+Dropping layer  model.layers.15.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.15.self_attn.k_proj.weight  is  0.7606021652572316
+Dropout probability for layer  model.layers.15.self_attn.v_proj.weight  is  0.7658344293069878
+Dropout probability for layer  model.layers.15.self_attn.o_proj.weight  is  0.1283914644997628
+Dropping layer  model.layers.15.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.15.mlp.gate_proj.weight  is  0.4752823780987313
+Dropout probability for layer  model.layers.15.mlp.up_proj.weight  is  0.5498035934949439
+Dropout probability for layer  model.layers.15.mlp.down_proj.weight  is  0.2650566289400591
+Dropout probability for layer  model.layers.15.input_layernorm.weight  is  0.8724330410852574
+Dropout probability for layer  model.layers.15.post_attention_layernorm.weight  is  0.4231379402008869
+Dropout probability for layer  model.layers.16.self_attn.q_proj.weight  is  0.21179820544208205
+Dropping layer  model.layers.16.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.16.self_attn.k_proj.weight  is  0.5392960887794583
+Dropout probability for layer  model.layers.16.self_attn.v_proj.weight  is  0.7299310690899762
+Dropout probability for layer  model.layers.16.self_attn.o_proj.weight  is  0.2011510633896959
+Dropping layer  model.layers.16.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.16.mlp.gate_proj.weight  is  0.31171629130089495
+Dropout probability for layer  model.layers.16.mlp.up_proj.weight  is  0.9951493566608947
+Dropout probability for layer  model.layers.16.mlp.down_proj.weight  is  0.6498780576394535
+Dropout probability for layer  model.layers.16.input_layernorm.weight  is  0.43810008391450406
+Dropout probability for layer  model.layers.16.post_attention_layernorm.weight  is  0.5175758410355906
+Dropout probability for layer  model.layers.17.self_attn.q_proj.weight  is  0.12100419586826572
+Dropping layer  model.layers.17.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.17.self_attn.k_proj.weight  is  0.22469733703155736
+Dropping layer  model.layers.17.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.17.self_attn.v_proj.weight  is  0.33808556214745533
+Dropping layer  model.layers.17.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.17.self_attn.o_proj.weight  is  0.5883087184572333
+Dropout probability for layer  model.layers.17.mlp.gate_proj.weight  is  0.230114732596577
+Dropout probability for layer  model.layers.17.mlp.up_proj.weight  is  0.22021738445155947
+Dropout probability for layer  model.layers.17.mlp.down_proj.weight  is  0.07099308600903254
+Dropout probability for layer  model.layers.17.input_layernorm.weight  is  0.6311029572700989
+Dropout probability for layer  model.layers.17.post_attention_layernorm.weight  is  0.22894178381115438
+Dropout probability for layer  model.layers.18.self_attn.q_proj.weight  is  0.905420013006128
+Dropout probability for layer  model.layers.18.self_attn.k_proj.weight  is  0.8596354002537465
+Dropout probability for layer  model.layers.18.self_attn.v_proj.weight  is  0.07085734988865344
+Dropping layer  model.layers.18.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.18.self_attn.o_proj.weight  is  0.23800463436899522
+Dropping layer  model.layers.18.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.18.mlp.gate_proj.weight  is  0.6689777782962806
+Dropout probability for layer  model.layers.18.mlp.up_proj.weight  is  0.2142368073704386
+Dropout probability for layer  model.layers.18.mlp.down_proj.weight  is  0.132311848725025
+Dropout probability for layer  model.layers.18.input_layernorm.weight  is  0.935514240580671
+Dropout probability for layer  model.layers.18.post_attention_layernorm.weight  is  0.5710430933252845
+Dropout probability for layer  model.layers.19.self_attn.q_proj.weight  is  0.47267102631179414
+Dropping layer  model.layers.19.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.19.self_attn.k_proj.weight  is  0.7846194242907534
+Dropout probability for layer  model.layers.19.self_attn.v_proj.weight  is  0.8074969977666434
+Dropout probability for layer  model.layers.19.self_attn.o_proj.weight  is  0.1904099143618777
+Dropping layer  model.layers.19.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.19.mlp.gate_proj.weight  is  0.09693081422882333
+Dropout probability for layer  model.layers.19.mlp.up_proj.weight  is  0.4310511824063775
+Dropout probability for layer  model.layers.19.mlp.down_proj.weight  is  0.4235786230199208
+Dropout probability for layer  model.layers.19.input_layernorm.weight  is  0.467024668036675
+Dropout probability for layer  model.layers.19.post_attention_layernorm.weight  is  0.7290758494598506
+Dropout probability for layer  model.layers.20.self_attn.q_proj.weight  is  0.6733645472933015
+Dropout probability for layer  model.layers.20.self_attn.k_proj.weight  is  0.9841652113659661
+Dropout probability for layer  model.layers.20.self_attn.v_proj.weight  is  0.09841787115195888
+Dropping layer  model.layers.20.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.20.self_attn.o_proj.weight  is  0.4026212821022688
+Dropping layer  model.layers.20.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.20.mlp.gate_proj.weight  is  0.33930260539496315
+Dropout probability for layer  model.layers.20.mlp.up_proj.weight  is  0.8616725363527911
+Dropout probability for layer  model.layers.20.mlp.down_proj.weight  is  0.24865633392028563
+Dropout probability for layer  model.layers.20.input_layernorm.weight  is  0.1902089084408115
+Dropout probability for layer  model.layers.20.post_attention_layernorm.weight  is  0.4486135478331319
+Dropout probability for layer  model.layers.21.self_attn.q_proj.weight  is  0.4218816398344042
+Dropping layer  model.layers.21.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.21.self_attn.k_proj.weight  is  0.27854514466694047
+Dropping layer  model.layers.21.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.21.self_attn.v_proj.weight  is  0.2498064478821005
+Dropping layer  model.layers.21.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.21.self_attn.o_proj.weight  is  0.9232655992760128
+Dropout probability for layer  model.layers.21.mlp.gate_proj.weight  is  0.44313074505345695
+Dropout probability for layer  model.layers.21.mlp.up_proj.weight  is  0.8613491047618306
+Dropout probability for layer  model.layers.21.mlp.down_proj.weight  is  0.5503253124498481
+Dropout probability for layer  model.layers.21.input_layernorm.weight  is  0.05058832952488124
+Dropout probability for layer  model.layers.21.post_attention_layernorm.weight  is  0.9992824684127266
+Dropout probability for layer  model.layers.22.self_attn.q_proj.weight  is  0.8360275850799519
+Dropout probability for layer  model.layers.22.self_attn.k_proj.weight  is  0.9689962572847513
+Dropout probability for layer  model.layers.22.self_attn.v_proj.weight  is  0.9263669830081276
+Dropout probability for layer  model.layers.22.self_attn.o_proj.weight  is  0.8486957344143055
+Dropout probability for layer  model.layers.22.mlp.gate_proj.weight  is  0.16631111060391401
+Dropout probability for layer  model.layers.22.mlp.up_proj.weight  is  0.48564112545071847
+Dropout probability for layer  model.layers.22.mlp.down_proj.weight  is  0.21374729919918167
+Dropout probability for layer  model.layers.22.input_layernorm.weight  is  0.4010402925494526
+Dropout probability for layer  model.layers.22.post_attention_layernorm.weight  is  0.058635399972178925
+Dropout probability for layer  model.layers.23.self_attn.q_proj.weight  is  0.3789731189769161
+Dropping layer  model.layers.23.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.23.self_attn.k_proj.weight  is  0.9853088437797259
+Dropout probability for layer  model.layers.23.self_attn.v_proj.weight  is  0.26520305817215195
+Dropping layer  model.layers.23.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.23.self_attn.o_proj.weight  is  0.7840706019485694
+Dropout probability for layer  model.layers.23.mlp.gate_proj.weight  is  0.4550083673391433
+Dropout probability for layer  model.layers.23.mlp.up_proj.weight  is  0.4230074859901629
+Dropout probability for layer  model.layers.23.mlp.down_proj.weight  is  0.9573176408596732
+Dropout probability for layer  model.layers.23.input_layernorm.weight  is  0.9954226894927138
+Dropout probability for layer  model.layers.23.post_attention_layernorm.weight  is  0.5557683234056182
+Dropout probability for layer  model.layers.24.self_attn.q_proj.weight  is  0.718408275296326
+Dropout probability for layer  model.layers.24.self_attn.k_proj.weight  is  0.15479682527406413
+Dropping layer  model.layers.24.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.24.self_attn.v_proj.weight  is  0.2967078254945642
+Dropping layer  model.layers.24.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.24.self_attn.o_proj.weight  is  0.9687093649691588
+Dropout probability for layer  model.layers.24.mlp.gate_proj.weight  is  0.5791802908162562
+Dropout probability for layer  model.layers.24.mlp.up_proj.weight  is  0.5421952013742742
+Dropout probability for layer  model.layers.24.mlp.down_proj.weight  is  0.7479755603790641
+Dropout probability for layer  model.layers.24.input_layernorm.weight  is  0.05716527290748308
+Dropout probability for layer  model.layers.24.post_attention_layernorm.weight  is  0.5841775944589712
+Dropout probability for layer  model.layers.25.self_attn.q_proj.weight  is  0.5028503829195136
+Dropout probability for layer  model.layers.25.self_attn.k_proj.weight  is  0.8527198920482854
+Dropout probability for layer  model.layers.25.self_attn.v_proj.weight  is  0.15743272793948326
+Dropping layer  model.layers.25.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.25.self_attn.o_proj.weight  is  0.9607789032744504
+Dropout probability for layer  model.layers.25.mlp.gate_proj.weight  is  0.08011146524058688
+Dropout probability for layer  model.layers.25.mlp.up_proj.weight  is  0.1858249609807232
+Dropout probability for layer  model.layers.25.mlp.down_proj.weight  is  0.5950351064500277
+Dropout probability for layer  model.layers.25.input_layernorm.weight  is  0.6752125536040902
+Dropout probability for layer  model.layers.25.post_attention_layernorm.weight  is  0.2352038950009312
+Dropout probability for layer  model.layers.26.self_attn.q_proj.weight  is  0.11988661394712419
+Dropping layer  model.layers.26.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.26.self_attn.k_proj.weight  is  0.8902873141294375
+Dropout probability for layer  model.layers.26.self_attn.v_proj.weight  is  0.24621534778862486
+Dropping layer  model.layers.26.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.26.self_attn.o_proj.weight  is  0.5945191535334412
+Dropout probability for layer  model.layers.26.mlp.gate_proj.weight  is  0.6193815103321031
+Dropout probability for layer  model.layers.26.mlp.up_proj.weight  is  0.4192249153358725
+Dropout probability for layer  model.layers.26.mlp.down_proj.weight  is  0.5836722892912247
+Dropout probability for layer  model.layers.26.input_layernorm.weight  is  0.5227827155319589
+Dropout probability for layer  model.layers.26.post_attention_layernorm.weight  is  0.9347062577364272
+Dropout probability for layer  model.layers.27.self_attn.q_proj.weight  is  0.20425919942353643
+Dropping layer  model.layers.27.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.27.self_attn.k_proj.weight  is  0.7161918007894148
+Dropout probability for layer  model.layers.27.self_attn.v_proj.weight  is  0.23868595261584602
+Dropping layer  model.layers.27.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.27.self_attn.o_proj.weight  is  0.3957858467912545
+Dropping layer  model.layers.27.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.27.mlp.gate_proj.weight  is  0.6716902229599713
+Dropout probability for layer  model.layers.27.mlp.up_proj.weight  is  0.2999970797987622
+Dropout probability for layer  model.layers.27.mlp.down_proj.weight  is  0.31617719627185403
+Dropout probability for layer  model.layers.27.input_layernorm.weight  is  0.7518644924144021
+Dropout probability for layer  model.layers.27.post_attention_layernorm.weight  is  0.07254311449315731
+Dropout probability for layer  model.layers.28.self_attn.q_proj.weight  is  0.4582855226185861
+Dropping layer  model.layers.28.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.28.self_attn.k_proj.weight  is  0.9984544408544423
+Dropout probability for layer  model.layers.28.self_attn.v_proj.weight  is  0.9960964478550944
+Dropout probability for layer  model.layers.28.self_attn.o_proj.weight  is  0.073260721099633
+Dropping layer  model.layers.28.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.28.mlp.gate_proj.weight  is  0.2131543122670404
+Dropout probability for layer  model.layers.28.mlp.up_proj.weight  is  0.26520041475040135
+Dropout probability for layer  model.layers.28.mlp.down_proj.weight  is  0.9332593779937091
+Dropout probability for layer  model.layers.28.input_layernorm.weight  is  0.8808641736864395
+Dropout probability for layer  model.layers.28.post_attention_layernorm.weight  is  0.8792702424845428
+Dropout probability for layer  model.layers.29.self_attn.q_proj.weight  is  0.36952708873888396
+Dropping layer  model.layers.29.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.29.self_attn.k_proj.weight  is  0.15774683235723197
+Dropping layer  model.layers.29.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.29.self_attn.v_proj.weight  is  0.833744954639807
+Dropout probability for layer  model.layers.29.self_attn.o_proj.weight  is  0.703539925087371
+Dropout probability for layer  model.layers.29.mlp.gate_proj.weight  is  0.6116777657259501
+Dropout probability for layer  model.layers.29.mlp.up_proj.weight  is  0.9872330636315043
+Dropout probability for layer  model.layers.29.mlp.down_proj.weight  is  0.6539763177107326
+Dropout probability for layer  model.layers.29.input_layernorm.weight  is  0.007823107152157949
+Dropout probability for layer  model.layers.29.post_attention_layernorm.weight  is  0.8171041351154616
+Dropout probability for layer  model.layers.30.self_attn.q_proj.weight  is  0.2993787521999779
+Dropping layer  model.layers.30.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.30.self_attn.k_proj.weight  is  0.6633887149660773
+Dropout probability for layer  model.layers.30.self_attn.v_proj.weight  is  0.9389300039271039
+Dropout probability for layer  model.layers.30.self_attn.o_proj.weight  is  0.13429111439336772
+Dropping layer  model.layers.30.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.30.mlp.gate_proj.weight  is  0.11542867041910221
+Dropout probability for layer  model.layers.30.mlp.up_proj.weight  is  0.10703597770941764
+Dropout probability for layer  model.layers.30.mlp.down_proj.weight  is  0.5532236408848159
+Dropout probability for layer  model.layers.30.input_layernorm.weight  is  0.2723482123148163
+Dropout probability for layer  model.layers.30.post_attention_layernorm.weight  is  0.6048298270302239
+Dropout probability for layer  model.layers.31.self_attn.q_proj.weight  is  0.7176121871387979
+Dropout probability for layer  model.layers.31.self_attn.k_proj.weight  is  0.20359731232745293
+Dropping layer  model.layers.31.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.31.self_attn.v_proj.weight  is  0.6342379588850797
+Dropout probability for layer  model.layers.31.self_attn.o_proj.weight  is  0.2639839016304094
+Dropping layer  model.layers.31.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.31.mlp.gate_proj.weight  is  0.48853185214937656
+Dropout probability for layer  model.layers.31.mlp.up_proj.weight  is  0.9053364910793232
+Dropout probability for layer  model.layers.31.mlp.down_proj.weight  is  0.8461037132948555
+Dropout probability for layer  model.layers.31.input_layernorm.weight  is  0.09229846771273342
+Dropout probability for layer  model.layers.31.post_attention_layernorm.weight  is  0.42357577256372636
+Dropout probability for layer  model.norm.weight  is  0.27668022397225167
+Dropout probability for layer  lm_head.weight  is  0.0035456890877823
+2025-03-28:12:51:49,098 INFO     [evaluator.py:164] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2025-03-28:12:51:49,098 INFO     [evaluator.py:217] Using pre-initialized model
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 171 examples [00:00, 2390.79 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 19 examples [00:00, 4268.21 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 100.14 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 1466 examples [00:00, 14573.84 examples/s]Generating test split: 1534 examples [00:00, 14361.94 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 170 examples [00:00, 14830.73 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 97.53 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 324 examples [00:00, 5481.05 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 35 examples [00:00, 6186.29 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 101.49 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 311 examples [00:00, 5620.28 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 34 examples [00:00, 7353.12 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 103.42 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 895 examples [00:00, 11805.91 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 100 examples [00:00, 13308.07 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 100.10 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 346 examples [00:00, 5909.30 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 38 examples [00:00, 5816.92 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 100.94 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 163 examples [00:00, 3248.42 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 18 examples [00:00, 3604.73 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 104.79 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 108 examples [00:00, 2217.57 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 11 examples [00:00, 2120.18 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 102.94 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 121 examples [00:00, 2413.59 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 13 examples [00:00, 2908.05 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 105.23 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 237 examples [00:00, 4024.31 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 26 examples [00:00, 4273.86 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 103.46 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 204 examples [00:00, 3752.02 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 22 examples [00:00, 3751.61 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 101.50 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 165 examples [00:00, 3212.28 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 18 examples [00:00, 3024.86 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 104.56 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 126 examples [00:00, 2442.57 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 14 examples [00:00, 3161.76 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 95.51 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 100 examples [00:00, 1985.22 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 11 examples [00:00, 2694.62 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 105.39 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 201 examples [00:00, 3987.47 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 22 examples [00:00, 4072.86 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 104.31 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 245 examples [00:00, 4669.85 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 27 examples [00:00, 4580.79 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 104.31 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 110 examples [00:00, 2250.93 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 12 examples [00:00, 2524.91 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 105.23 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 612 examples [00:00, 9521.90 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 69 examples [00:00, 9904.75 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 100.10 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 131 examples [00:00, 2605.43 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 12 examples [00:00, 2586.02 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 102.24 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 545 examples [00:00, 8688.94 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 60 examples [00:00, 9062.23 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 102.15 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 238 examples [00:00, 4396.99 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 26 examples [00:00, 4830.86 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 103.63 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 390 examples [00:00, 6799.23 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 43 examples [00:00, 7680.24 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 103.89 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 193 examples [00:00, 3821.01 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 21 examples [00:00, 5083.42 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 103.94 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 198 examples [00:00, 3702.31 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 22 examples [00:00, 5522.78 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 104.88 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 114 examples [00:00, 2325.97 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 12 examples [00:00, 2906.32 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 103.94 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 166 examples [00:00, 3299.58 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 18 examples [00:00, 3678.14 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 105.04 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 272 examples [00:00, 4813.92 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 31 examples [00:00, 5719.09 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 104.50 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 282 examples [00:00, 4995.79 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 31 examples [00:00, 5195.53 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 106.87 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 306 examples [00:00, 5667.25 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 33 examples [00:00, 6388.74 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 106.10 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 783 examples [00:00, 11097.80 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 86 examples [00:00, 14105.12 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 102.04 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 100 examples [00:00, 2023.57 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 11 examples [00:00, 3024.41 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 104.32 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 234 examples [00:00, 4442.78 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 25 examples [00:00, 4878.01 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 105.93 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 103 examples [00:00, 2103.69 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 11 examples [00:00, 2435.07 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 104.02 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 223 examples [00:00, 4310.61 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 23 examples [00:00, 4728.87 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 106.06 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 100 examples [00:00, 2089.71 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 10 examples [00:00, 2672.72 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 103.76 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 173 examples [00:00, 3338.49 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 22 examples [00:00, 4967.15 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 106.83 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 265 examples [00:00, 4851.11 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 29 examples [00:00, 6483.73 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 103.93 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 100 examples [00:00, 1992.70 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 11 examples [00:00, 3060.11 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 105.52 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 112 examples [00:00, 1754.15 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 11 examples [00:00, 2727.28 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 104.85 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 216 examples [00:00, 3923.12 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 23 examples [00:00, 4950.94 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 104.15 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 151 examples [00:00, 2961.46 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 17 examples [00:00, 3736.87 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 102.30 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 270 examples [00:00, 5134.60 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 29 examples [00:00, 6543.02 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 102.90 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 100 examples [00:00, 2011.91 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 9 examples [00:00, 2475.81 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 104.21 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 203 examples [00:00, 3913.84 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 22 examples [00:00, 4207.31 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 106.24 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 310 examples [00:00, 5642.47 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 32 examples [00:00, 6994.88 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 104.42 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 378 examples [00:00, 6437.92 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 41 examples [00:00, 7186.53 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 104.30 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 145 examples [00:00, 2961.11 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 16 examples [00:00, 3771.86 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 103.63 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 235 examples [00:00, 4402.20 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 26 examples [00:00, 6366.14 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 102.73 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 100 examples [00:00, 2073.27 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 11 examples [00:00, 2520.89 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 102.53 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 102 examples [00:00, 2018.05 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 11 examples [00:00, 2640.80 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 103.46 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 100 examples [00:00, 2006.88 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 11 examples [00:00, 2645.79 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 105.93 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 100 examples [00:00, 1989.34 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 11 examples [00:00, 2292.65 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 104.70 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 100 examples [00:00, 2052.72 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 8 examples [00:00, 1618.41 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 102.88 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 144 examples [00:00, 2968.35 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 16 examples [00:00, 3203.44 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 105.33 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 152 examples [00:00, 3009.32 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 16 examples [00:00, 4310.14 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 101.68 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 135 examples [00:00, 2751.21 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 14 examples [00:00, 3802.39 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 106.85 examples/s]
+Generating test split: 0 examples [00:00, ? examples/s]Generating test split: 100 examples [00:00, 2084.22 examples/s]
+Generating validation split: 0 examples [00:00, ? examples/s]Generating validation split: 11 examples [00:00, 2794.00 examples/s]
+Generating dev split: 0 examples [00:00, ? examples/s]Generating dev split: 5 examples [00:00, 103.87 examples/s]
+2025-03-28:12:52:39,351 INFO     [task.py:415] Building contexts for mmlu_abstract_algebra on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 834.85it/s]
+2025-03-28:12:52:39,363 INFO     [task.py:415] Building contexts for mmlu_anatomy on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 854.15it/s]
+2025-03-28:12:52:39,376 INFO     [task.py:415] Building contexts for mmlu_astronomy on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 854.64it/s]
+2025-03-28:12:52:39,388 INFO     [task.py:415] Building contexts for mmlu_college_biology on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 844.04it/s]
+2025-03-28:12:52:39,401 INFO     [task.py:415] Building contexts for mmlu_college_chemistry on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 859.91it/s]
+2025-03-28:12:52:39,413 INFO     [task.py:415] Building contexts for mmlu_college_computer_science on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 837.24it/s]
+2025-03-28:12:52:39,426 INFO     [task.py:415] Building contexts for mmlu_college_mathematics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 847.45it/s]
+2025-03-28:12:52:39,438 INFO     [task.py:415] Building contexts for mmlu_college_physics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 849.20it/s]
+2025-03-28:12:52:39,451 INFO     [task.py:415] Building contexts for mmlu_computer_security on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 813.09it/s]
+2025-03-28:12:52:39,464 INFO     [task.py:415] Building contexts for mmlu_conceptual_physics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 845.18it/s]
+2025-03-28:12:52:39,476 INFO     [task.py:415] Building contexts for mmlu_electrical_engineering on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 853.52it/s]
+2025-03-28:12:52:39,489 INFO     [task.py:415] Building contexts for mmlu_elementary_mathematics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 846.17it/s]
+2025-03-28:12:52:39,501 INFO     [task.py:415] Building contexts for mmlu_high_school_biology on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 844.67it/s]
+2025-03-28:12:52:39,514 INFO     [task.py:415] Building contexts for mmlu_high_school_chemistry on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 838.64it/s]
+2025-03-28:12:52:39,526 INFO     [task.py:415] Building contexts for mmlu_high_school_computer_science on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 835.62it/s]
+2025-03-28:12:52:39,539 INFO     [task.py:415] Building contexts for mmlu_high_school_mathematics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 852.55it/s]
+2025-03-28:12:52:39,552 INFO     [task.py:415] Building contexts for mmlu_high_school_physics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 852.74it/s]
+2025-03-28:12:52:39,564 INFO     [task.py:415] Building contexts for mmlu_high_school_statistics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 841.77it/s]
+2025-03-28:12:52:39,577 INFO     [task.py:415] Building contexts for mmlu_machine_learning on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 855.75it/s]
+2025-03-28:12:52:39,589 INFO     [task.py:415] Building contexts for mmlu_business_ethics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 852.83it/s]
+2025-03-28:12:52:39,601 INFO     [task.py:415] Building contexts for mmlu_clinical_knowledge on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 845.73it/s]
+2025-03-28:12:52:39,614 INFO     [task.py:415] Building contexts for mmlu_college_medicine on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 850.74it/s]
+2025-03-28:12:52:39,626 INFO     [task.py:415] Building contexts for mmlu_global_facts on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 863.24it/s]
+2025-03-28:12:52:39,639 INFO     [task.py:415] Building contexts for mmlu_human_aging on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 852.02it/s]
+2025-03-28:12:52:39,651 INFO     [task.py:415] Building contexts for mmlu_management on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 853.80it/s]
+2025-03-28:12:52:39,663 INFO     [task.py:415] Building contexts for mmlu_marketing on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 869.27it/s]
+2025-03-28:12:52:39,676 INFO     [task.py:415] Building contexts for mmlu_medical_genetics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 835.64it/s]
+2025-03-28:12:52:39,688 INFO     [task.py:415] Building contexts for mmlu_miscellaneous on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 856.24it/s]
+2025-03-28:12:52:39,701 INFO     [task.py:415] Building contexts for mmlu_nutrition on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 861.15it/s]
+2025-03-28:12:52:39,713 INFO     [task.py:415] Building contexts for mmlu_professional_accounting on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 832.62it/s]
+2025-03-28:12:52:39,726 INFO     [task.py:415] Building contexts for mmlu_professional_medicine on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 848.95it/s]
+2025-03-28:12:52:39,738 INFO     [task.py:415] Building contexts for mmlu_virology on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 855.74it/s]
+2025-03-28:12:52:39,751 INFO     [task.py:415] Building contexts for mmlu_econometrics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 843.60it/s]
+2025-03-28:12:52:39,763 INFO     [task.py:415] Building contexts for mmlu_high_school_geography on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 853.82it/s]
+2025-03-28:12:52:39,775 INFO     [task.py:415] Building contexts for mmlu_high_school_government_and_politics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 859.59it/s]
+2025-03-28:12:52:39,788 INFO     [task.py:415] Building contexts for mmlu_high_school_macroeconomics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 847.81it/s]
+2025-03-28:12:52:39,800 INFO     [task.py:415] Building contexts for mmlu_high_school_microeconomics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 843.30it/s]
+2025-03-28:12:52:39,813 INFO     [task.py:415] Building contexts for mmlu_high_school_psychology on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 841.49it/s]
+2025-03-28:12:52:39,825 INFO     [task.py:415] Building contexts for mmlu_human_sexuality on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 844.18it/s]
+2025-03-28:12:52:39,838 INFO     [task.py:415] Building contexts for mmlu_professional_psychology on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 840.54it/s]
+2025-03-28:12:52:39,851 INFO     [task.py:415] Building contexts for mmlu_public_relations on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 846.70it/s]
+2025-03-28:12:52:39,863 INFO     [task.py:415] Building contexts for mmlu_security_studies on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 836.45it/s]
+2025-03-28:12:52:39,876 INFO     [task.py:415] Building contexts for mmlu_sociology on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 837.87it/s]
+2025-03-28:12:52:39,888 INFO     [task.py:415] Building contexts for mmlu_us_foreign_policy on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 847.76it/s]
+2025-03-28:12:52:39,901 INFO     [task.py:415] Building contexts for mmlu_formal_logic on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 821.22it/s]
+2025-03-28:12:52:39,914 INFO     [task.py:415] Building contexts for mmlu_high_school_european_history on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 829.67it/s]
+2025-03-28:12:52:39,927 INFO     [task.py:415] Building contexts for mmlu_high_school_us_history on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 848.29it/s]
+2025-03-28:12:52:39,939 INFO     [task.py:415] Building contexts for mmlu_high_school_world_history on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 839.31it/s]
+2025-03-28:12:52:39,952 INFO     [task.py:415] Building contexts for mmlu_international_law on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 848.72it/s]
+2025-03-28:12:52:39,964 INFO     [task.py:415] Building contexts for mmlu_jurisprudence on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 854.81it/s]
+2025-03-28:12:52:39,977 INFO     [task.py:415] Building contexts for mmlu_logical_fallacies on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 849.69it/s]
+2025-03-28:12:52:39,989 INFO     [task.py:415] Building contexts for mmlu_moral_disputes on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 853.58it/s]
+2025-03-28:12:52:40,001 INFO     [task.py:415] Building contexts for mmlu_moral_scenarios on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 859.51it/s]
+2025-03-28:12:52:40,014 INFO     [task.py:415] Building contexts for mmlu_philosophy on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 840.14it/s]
+2025-03-28:12:52:40,026 INFO     [task.py:415] Building contexts for mmlu_prehistory on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 859.28it/s]
+2025-03-28:12:52:40,039 INFO     [task.py:415] Building contexts for mmlu_professional_law on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 868.15it/s]
+2025-03-28:12:52:40,051 INFO     [task.py:415] Building contexts for mmlu_world_religions on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 848.50it/s]
+2025-03-28:12:52:40,064 INFO     [evaluator.py:489] Running loglikelihood requests
+Running loglikelihood requests:   0%|          | 0/2280 [00:00<?, ?it/s]Running loglikelihood requests:   0%|          | 1/2280 [00:00<08:03,  4.71it/s]Running loglikelihood requests:   1%|          | 13/2280 [00:00<00:46, 48.58it/s]Running loglikelihood requests:   1%|▏         | 29/2280 [00:00<00:26, 86.41it/s]Running loglikelihood requests:   2%|▏         | 49/2280 [00:00<00:18, 121.21it/s]Running loglikelihood requests:   3%|▎         | 73/2280 [00:00<00:14, 151.24it/s]Running loglikelihood requests:   4%|▍         | 97/2280 [00:00<00:12, 171.39it/s]Running loglikelihood requests:   5%|▌         | 121/2280 [00:00<00:11, 184.55it/s]Running loglikelihood requests:   6%|▋         | 145/2280 [00:00<00:11, 193.18it/s]Running loglikelihood requests:   7%|▋         | 169/2280 [00:01<00:10, 196.96it/s]Running loglikelihood requests:   8%|▊         | 193/2280 [00:01<00:10, 198.49it/s]Running loglikelihood requests:  10%|▉         | 217/2280 [00:01<00:10, 201.84it/s]Running loglikelihood requests:  11%|█         | 241/2280 [00:01<00:10, 203.77it/s]Running loglikelihood requests:  12%|█▏        | 265/2280 [00:01<00:09, 205.01it/s]Running loglikelihood requests:  13%|█▎        | 289/2280 [00:01<00:09, 204.97it/s]Running loglikelihood requests:  14%|█▎        | 313/2280 [00:01<00:09, 205.44it/s]Running loglikelihood requests:  15%|█▍        | 337/2280 [00:01<00:09, 207.32it/s]Running loglikelihood requests:  16%|█▌        | 361/2280 [00:02<00:09, 208.38it/s]Running loglikelihood requests:  17%|█▋        | 385/2280 [00:02<00:09, 209.21it/s]Running loglikelihood requests:  18%|█▊        | 409/2280 [00:02<00:09, 207.59it/s]Running loglikelihood requests:  19%|█▉        | 433/2280 [00:02<00:08, 208.07it/s]Running loglikelihood requests:  20%|██        | 457/2280 [00:02<00:08, 209.28it/s]Running loglikelihood requests:  21%|██        | 481/2280 [00:02<00:08, 209.99it/s]Running loglikelihood requests:  22%|██▏       | 505/2280 [00:02<00:08, 210.53it/s]Running loglikelihood requests:  23%|██▎       | 529/2280 [00:02<00:08, 207.92it/s]Running loglikelihood requests:  24%|██▍       | 553/2280 [00:02<00:08, 208.68it/s]Running loglikelihood requests:  25%|██▌       | 574/2280 [00:03<00:08, 191.85it/s]Running loglikelihood requests:  26%|██▌       | 597/2280 [00:03<00:08, 194.04it/s]Running loglikelihood requests:  27%|██▋       | 621/2280 [00:03<00:08, 197.30it/s]Running loglikelihood requests:  28%|██▊       | 641/2280 [00:03<00:08, 197.87it/s]Running loglikelihood requests:  29%|██▉       | 665/2280 [00:03<00:08, 200.62it/s]Running loglikelihood requests:  30%|███       | 689/2280 [00:03<00:07, 202.68it/s]Running loglikelihood requests:  31%|███▏      | 713/2280 [00:03<00:07, 204.07it/s]Running loglikelihood requests:  32%|███▏      | 737/2280 [00:03<00:07, 202.68it/s]Running loglikelihood requests:  33%|███▎      | 761/2280 [00:04<00:07, 202.34it/s]Running loglikelihood requests:  34%|███▍      | 785/2280 [00:04<00:07, 203.66it/s]Running loglikelihood requests:  35%|███▌      | 809/2280 [00:04<00:07, 204.70it/s]Running loglikelihood requests:  37%|███▋      | 833/2280 [00:04<00:07, 205.23it/s]Running loglikelihood requests:  37%|███▋      | 854/2280 [00:04<00:06, 205.86it/s]Running loglikelihood requests:  38%|███▊      | 877/2280 [00:04<00:06, 202.77it/s]Running loglikelihood requests:  40%|███▉      | 901/2280 [00:04<00:06, 204.19it/s]Running loglikelihood requests:  41%|████      | 925/2280 [00:04<00:06, 205.05it/s]Running loglikelihood requests:  42%|████▏     | 949/2280 [00:04<00:06, 205.70it/s]Running loglikelihood requests:  43%|████▎     | 970/2280 [00:05<00:06, 205.16it/s]Running loglikelihood requests:  44%|████▎     | 993/2280 [00:05<00:06, 202.47it/s]Running loglikelihood requests:  45%|████▍     | 1017/2280 [00:05<00:06, 203.93it/s]Running loglikelihood requests:  46%|████▌     | 1041/2280 [00:05<00:06, 204.62it/s]Running loglikelihood requests:  47%|████▋     | 1065/2280 [00:05<00:05, 205.38it/s]Running loglikelihood requests:  48%|████▊     | 1086/2280 [00:05<00:05, 206.02it/s]Running loglikelihood requests:  49%|████▊     | 1109/2280 [00:05<00:05, 202.11it/s]Running loglikelihood requests:  50%|████▉     | 1133/2280 [00:05<00:05, 203.27it/s]Running loglikelihood requests:  51%|█████     | 1157/2280 [00:05<00:05, 204.07it/s]Running loglikelihood requests:  52%|█████▏    | 1181/2280 [00:06<00:05, 204.73it/s]Running loglikelihood requests:  53%|█████▎    | 1202/2280 [00:06<00:05, 204.78it/s]Running loglikelihood requests:  54%|█████▎    | 1225/2280 [00:06<00:05, 201.72it/s]Running loglikelihood requests:  55%|█████▍    | 1249/2280 [00:06<00:05, 202.84it/s]Running loglikelihood requests:  56%|█████▌    | 1273/2280 [00:06<00:04, 204.14it/s]Running loglikelihood requests:  57%|█████▋    | 1297/2280 [00:06<00:04, 205.03it/s]Running loglikelihood requests:  58%|█████▊    | 1318/2280 [00:06<00:04, 205.44it/s]Running loglikelihood requests:  59%|█████▉    | 1341/2280 [00:06<00:04, 202.46it/s]Running loglikelihood requests:  60%|█████▉    | 1365/2280 [00:06<00:04, 203.49it/s]Running loglikelihood requests:  61%|██████    | 1389/2280 [00:07<00:04, 204.09it/s]Running loglikelihood requests:  62%|██████▏   | 1413/2280 [00:07<00:04, 203.25it/s]Running loglikelihood requests:  63%|██████▎   | 1434/2280 [00:07<00:04, 203.93it/s]Running loglikelihood requests:  64%|██████▍   | 1457/2280 [00:07<00:04, 202.17it/s]Running loglikelihood requests:  65%|██████▍   | 1481/2280 [00:07<00:03, 203.57it/s]Running loglikelihood requests:  66%|██████▌   | 1505/2280 [00:07<00:03, 204.47it/s]Running loglikelihood requests:  67%|██████▋   | 1526/2280 [00:07<00:03, 205.78it/s]Running loglikelihood requests:  68%|██████▊   | 1547/2280 [00:07<00:03, 206.04it/s]Running loglikelihood requests:  69%|██████▉   | 1569/2280 [00:07<00:03, 199.86it/s]Running loglikelihood requests:  70%|██████▉   | 1593/2280 [00:08<00:03, 201.10it/s]Running loglikelihood requests:  71%|███████   | 1617/2280 [00:08<00:03, 202.26it/s]Running loglikelihood requests:  72%|███████▏  | 1641/2280 [00:08<00:03, 202.81it/s]Running loglikelihood requests:  73%|███████▎  | 1662/2280 [00:08<00:03, 202.95it/s]Running loglikelihood requests:  74%|███████▍  | 1684/2280 [00:08<00:02, 207.67it/s]Running loglikelihood requests:  75%|███████▍  | 1705/2280 [00:08<00:02, 198.61it/s]Running loglikelihood requests:  76%|███████▌  | 1729/2280 [00:08<00:02, 200.70it/s]Running loglikelihood requests:  77%|███████▋  | 1753/2280 [00:08<00:02, 201.85it/s]Running loglikelihood requests:  78%|███████▊  | 1774/2280 [00:08<00:02, 202.38it/s]Running loglikelihood requests:  79%|███████▊  | 1795/2280 [00:09<00:02, 204.18it/s]Running loglikelihood requests:  80%|███████▉  | 1817/2280 [00:09<00:02, 198.65it/s]Running loglikelihood requests:  81%|████████  | 1841/2280 [00:09<00:02, 200.56it/s]Running loglikelihood requests:  82%|████████▏ | 1862/2280 [00:09<00:02, 202.28it/s]Running loglikelihood requests:  83%|████████▎ | 1885/2280 [00:09<00:01, 198.86it/s]Running loglikelihood requests:  84%|████████▎ | 1909/2280 [00:09<00:01, 200.37it/s]Running loglikelihood requests:  85%|████████▍ | 1933/2280 [00:09<00:01, 201.54it/s]Running loglikelihood requests:  86%|████████▌ | 1957/2280 [00:09<00:01, 202.79it/s]Running loglikelihood requests:  87%|████████▋ | 1978/2280 [00:09<00:01, 203.68it/s]Running loglikelihood requests:  88%|████████▊ | 2001/2280 [00:10<00:01, 201.42it/s]Running loglikelihood requests:  89%|████████▉ | 2025/2280 [00:10<00:01, 203.29it/s]Running loglikelihood requests:  90%|████████▉ | 2049/2280 [00:10<00:01, 204.60it/s]Running loglikelihood requests:  91%|█████████ | 2070/2280 [00:10<00:01, 205.96it/s]Running loglikelihood requests:  92%|█████████▏| 2093/2280 [00:10<00:00, 201.99it/s]Running loglikelihood requests:  93%|█████████▎| 2117/2280 [00:10<00:00, 202.60it/s]Running loglikelihood requests:  94%|█████████▍| 2141/2280 [00:10<00:00, 204.02it/s]Running loglikelihood requests:  95%|█████████▍| 2165/2280 [00:10<00:00, 205.00it/s]Running loglikelihood requests:  96%|█████████▌| 2186/2280 [00:11<00:00, 204.90it/s]Running loglikelihood requests:  97%|█████████▋| 2209/2280 [00:11<00:00, 202.06it/s]Running loglikelihood requests:  98%|█████████▊| 2233/2280 [00:11<00:00, 203.46it/s]Running loglikelihood requests:  99%|█████████▉| 2257/2280 [00:11<00:00, 204.29it/s]Running loglikelihood requests: 100%|█████████▉| 2278/2280 [00:11<00:00, 190.83it/s]Running loglikelihood requests: 100%|██████████| 2280/2280 [00:11<00:00, 198.47it/s]
+{'mmlu': {'acc,none': 0.42105263157894735, 'acc_stderr,none': 0.020071347721322238, 'alias': 'mmlu'}, 'mmlu_humanities': {'acc,none': 0.4461538461538462, 'acc_stderr,none': 0.04336290903919939, 'alias': ' - humanities'}, 'mmlu_formal_logic': {'alias': '  - formal_logic', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_high_school_european_history': {'alias': '  - high_school_european_history', 'acc,none': 0.4, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_high_school_us_history': {'alias': '  - high_school_us_history', 'acc,none': 0.6, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_high_school_world_history': {'alias': '  - high_school_world_history', 'acc,none': 0.6, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_international_law': {'alias': '  - international_law', 'acc,none': 0.7, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_jurisprudence': {'alias': '  - jurisprudence', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519464}, 'mmlu_logical_fallacies': {'alias': '  - logical_fallacies', 'acc,none': 0.6, 'acc_stderr,none': 0.1632993161855452}, 'mmlu_moral_disputes': {'alias': '  - moral_disputes', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_moral_scenarios': {'alias': '  - moral_scenarios', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_philosophy': {'alias': '  - philosophy', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_prehistory': {'alias': '  - prehistory', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519464}, 'mmlu_professional_law': {'alias': '  - professional_law', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_world_religions': {'alias': '  - world_religions', 'acc,none': 0.6, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_other': {'acc,none': 0.4230769230769231, 'acc_stderr,none': 0.04267517173613651, 'alias': ' - other'}, 'mmlu_business_ethics': {'alias': '  - business_ethics', 'acc,none': 0.6, 'acc_stderr,none': 0.1632993161855452}, 'mmlu_clinical_knowledge': {'alias': '  - clinical_knowledge', 'acc,none': 0.4, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_college_medicine': {'alias': '  - college_medicine', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_global_facts': {'alias': '  - global_facts', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_human_aging': {'alias': '  - human_aging', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_management': {'alias': '  - management', 'acc,none': 0.4, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_marketing': {'alias': '  - marketing', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_medical_genetics': {'alias': '  - medical_genetics', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_miscellaneous': {'alias': '  - miscellaneous', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_nutrition': {'alias': '  - nutrition', 'acc,none': 0.8, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_professional_accounting': {'alias': '  - professional_accounting', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_professional_medicine': {'alias': '  - professional_medicine', 'acc,none': 0.6, 'acc_stderr,none': 0.1632993161855452}, 'mmlu_virology': {'alias': '  - virology', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519464}, 'mmlu_social_sciences': {'acc,none': 0.4583333333333333, 'acc_stderr,none': 0.043301270189221926, 'alias': ' - social sciences'}, 'mmlu_econometrics': {'alias': '  - econometrics', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519464}, 'mmlu_high_school_geography': {'alias': '  - high_school_geography', 'acc,none': 0.1, 'acc_stderr,none': 0.09999999999999999}, 'mmlu_high_school_government_and_politics': {'alias': '  - high_school_government_and_politics', 'acc,none': 0.7, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_high_school_macroeconomics': {'alias': '  - high_school_macroeconomics', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519464}, 'mmlu_high_school_microeconomics': {'alias': '  - high_school_microeconomics', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_high_school_psychology': {'alias': '  - high_school_psychology', 'acc,none': 0.4, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_human_sexuality': {'alias': '  - human_sexuality', 'acc,none': 0.8, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_professional_psychology': {'alias': '  - professional_psychology', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_public_relations': {'alias': '  - public_relations', 'acc,none': 0.8, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_security_studies': {'alias': '  - security_studies', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_sociology': {'alias': '  - sociology', 'acc,none': 0.4, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_us_foreign_policy': {'alias': '  - us_foreign_policy', 'acc,none': 0.6, 'acc_stderr,none': 0.1632993161855452}, 'mmlu_stem': {'acc,none': 0.37894736842105264, 'acc_stderr,none': 0.033837371091203355, 'alias': ' - stem'}, 'mmlu_abstract_algebra': {'alias': '  - abstract_algebra', 'acc,none': 0.0, 'acc_stderr,none': 0.0}, 'mmlu_anatomy': {'alias': '  - anatomy', 'acc,none': 0.6, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_astronomy': {'alias': '  - astronomy', 'acc,none': 0.4, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_college_biology': {'alias': '  - college_biology', 'acc,none': 0.6, 'acc_stderr,none': 0.1632993161855452}, 'mmlu_college_chemistry': {'alias': '  - college_chemistry', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_college_computer_science': {'alias': '  - college_computer_science', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_college_mathematics': {'alias': '  - college_mathematics', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519464}, 'mmlu_college_physics': {'alias': '  - college_physics', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_computer_security': {'alias': '  - computer_security', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_conceptual_physics': {'alias': '  - conceptual_physics', 'acc,none': 0.4, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_electrical_engineering': {'alias': '  - electrical_engineering', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_elementary_mathematics': {'alias': '  - elementary_mathematics', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_high_school_biology': {'alias': '  - high_school_biology', 'acc,none': 0.9, 'acc_stderr,none': 0.09999999999999999}, 'mmlu_high_school_chemistry': {'alias': '  - high_school_chemistry', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_high_school_computer_science': {'alias': '  - high_school_computer_science', 'acc,none': 0.6, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_high_school_mathematics': {'alias': '  - high_school_mathematics', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_high_school_physics': {'alias': '  - high_school_physics', 'acc,none': 0.4, 'acc_stderr,none': 0.1632993161855452}, 'mmlu_high_school_statistics': {'alias': '  - high_school_statistics', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_machine_learning': {'alias': '  - machine_learning', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}}
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/eval.py", line 449, in <module>
+[rank0]:     main(args, eval_arguments, generation_config)
+[rank0]:   File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/eval.py", line 429, in main
+[rank0]:     wrap.metric_result.pop("predicted_text")
+[rank0]: AttributeError: 'NoneType' object has no attribute 'pop'
+E0328 12:52:57.788000 23456246740800 torch/distributed/elastic/multiprocessing/api.py:833] failed (exitcode: 1) local_rank: 0 (pid: 322637) of binary: /storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/python
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+eval.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-03-28_12:52:57
+  host      : atl1-1-03-012-28-0.pace.gatech.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 322637)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: atl1-1-03-012-28-0: task 3: Exited with exit code 1
+---------------------------------------
+Begin Slurm Epilog: Mar-28-2025 12:52:58
+Job ID:        2381587
+User ID:       mtalreja6
+Account:       coc
+Job name:      LayerSkipWithLayerDrop
+Resources:     cpu=4,gres/gpu:h100=1,mem=30G,node=1
+Rsrc Used:     cput=00:06:08,vmem=0,walltime=00:01:32,mem=32528K,energy_used=0
+Partition:     ice-gpu
+QOS:           coc-ice
+Nodes:         atl1-1-03-012-28-0
+---------------------------------------

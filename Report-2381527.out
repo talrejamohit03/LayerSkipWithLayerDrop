@@ -1,0 +1,144 @@
+---------------------------------------
+Begin Slurm Prolog: Mar-28-2025 12:12:52
+Job ID:    2381527
+User ID:   mtalreja6
+Account:   coc
+Job name:  LayerSkipWithLayerDrop
+Partition: ice-gpu
+QOS:       coc-ice
+---------------------------------------
+/var/lib/slurm/slurmd/job2381527/slurm_script: line 14: huggingface-cli: command not found
+/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/python
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    return f(*args, **kwargs)
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    result = agent.run()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = agent.run()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    result = agent.run()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    result = self._invoke_run(role)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    result = self._invoke_run(role)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    self._rendezvous(worker_group)
+    result = agent.run()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    self._rendezvous(worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+    result = self._invoke_run(role)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    result = self._invoke_run(role)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    result = f(*args, **kwargs)
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+    self._rendezvous(worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+    self._store = TCPStore(  # type: ignore[call-arg]
+    result = f(*args, **kwargs)
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+srun: error: atl1-1-03-013-3-0: tasks 0-3: Exited with exit code 1
+---------------------------------------
+Begin Slurm Epilog: Mar-28-2025 12:13:22
+Job ID:        2381527
+User ID:       mtalreja6
+Account:       coc
+Job name:      LayerSkipWithLayerDrop
+Resources:     cpu=4,gres/gpu:h100=1,mem=30G,node=1
+Rsrc Used:     cput=00:01:56,vmem=0,walltime=00:00:29,mem=32272K,energy_used=0
+Partition:     ice-gpu
+QOS:           coc-ice
+Nodes:         atl1-1-03-013-3-0
+---------------------------------------

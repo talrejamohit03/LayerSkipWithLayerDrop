@@ -1,0 +1,476 @@
+---------------------------------------
+Begin Slurm Prolog: Mar-28-2025 13:31:02
+Job ID:    2381653
+User ID:   mtalreja6
+Account:   coc
+Job name:  LayerSkipWithLayerDrop
+Partition: ice-gpu
+QOS:       coc-ice
+---------------------------------------
+/var/lib/slurm/slurmd/job2381653/slurm_script: line 14: huggingface-cli: command not found
+/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/python
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    result = agent.run()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = agent.run()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    result = f(*args, **kwargs)
+    result = agent.run()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    result = self._invoke_run(role)
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    result = self._invoke_run(role)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    result = self._invoke_run(role)
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._rendezvous(worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    self._rendezvous(worker_group)
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+srun: error: atl1-1-03-013-8-0: tasks 0,2-3: Exited with exit code 1
+/home/hice1/mtalreja6/.local/lib/python3.10/site-packages/torchvision/io/image.py:14: UserWarning: Failed to load image Python extension: '/home/hice1/mtalreja6/.local/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN2at4_ops9from_file4callESt17basic_string_viewIcSt11char_traitsIcEESt8optionalIbES6_IlES6_IN3c1010ScalarTypeEES6_INS9_6LayoutEES6_INS9_6DeviceEES7_'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+2025-03-28:13:32:58,763 INFO     [modeling.py:1014] We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:05<00:10,  5.37s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:14<00:07,  7.83s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:20<00:00,  7.02s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:20<00:00,  7.00s/it]
+Dropout probability for layer  model.embed_tokens.weight  is  0.6394267984578837
+Dropout probability for layer  model.layers.0.self_attn.q_proj.weight  is  0.025010755222666936
+Dropping layer  model.layers.0.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.0.self_attn.k_proj.weight  is  0.27502931836911926
+Dropping layer  model.layers.0.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.0.self_attn.v_proj.weight  is  0.22321073814882275
+Dropping layer  model.layers.0.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.0.self_attn.o_proj.weight  is  0.7364712141640124
+Dropout probability for layer  model.layers.0.mlp.gate_proj.weight  is  0.6766994874229113
+Dropout probability for layer  model.layers.0.mlp.up_proj.weight  is  0.8921795677048454
+Dropout probability for layer  model.layers.0.mlp.down_proj.weight  is  0.08693883262941615
+Dropout probability for layer  model.layers.0.input_layernorm.weight  is  0.4219218196852704
+Dropout probability for layer  model.layers.0.post_attention_layernorm.weight  is  0.029797219438070344
+Dropout probability for layer  model.layers.1.self_attn.q_proj.weight  is  0.21863797480360336
+Dropping layer  model.layers.1.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.1.self_attn.k_proj.weight  is  0.5053552881033624
+Dropout probability for layer  model.layers.1.self_attn.v_proj.weight  is  0.026535969683863625
+Dropping layer  model.layers.1.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.1.self_attn.o_proj.weight  is  0.1988376506866485
+Dropping layer  model.layers.1.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.1.mlp.gate_proj.weight  is  0.6498844377795232
+Dropout probability for layer  model.layers.1.mlp.up_proj.weight  is  0.5449414806032167
+Dropout probability for layer  model.layers.1.mlp.down_proj.weight  is  0.2204406220406967
+Dropout probability for layer  model.layers.1.input_layernorm.weight  is  0.5892656838759087
+Dropout probability for layer  model.layers.1.post_attention_layernorm.weight  is  0.8094304566778266
+Dropout probability for layer  model.layers.2.self_attn.q_proj.weight  is  0.006498759678061017
+Dropping layer  model.layers.2.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.2.self_attn.k_proj.weight  is  0.8058192518328079
+Dropout probability for layer  model.layers.2.self_attn.v_proj.weight  is  0.6981393949882269
+Dropout probability for layer  model.layers.2.self_attn.o_proj.weight  is  0.3402505165179919
+Dropping layer  model.layers.2.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.2.mlp.gate_proj.weight  is  0.15547949981178155
+Dropout probability for layer  model.layers.2.mlp.up_proj.weight  is  0.9572130722067812
+Dropout probability for layer  model.layers.2.mlp.down_proj.weight  is  0.33659454511262676
+Dropout probability for layer  model.layers.2.input_layernorm.weight  is  0.09274584338014791
+Dropout probability for layer  model.layers.2.post_attention_layernorm.weight  is  0.09671637683346401
+Dropout probability for layer  model.layers.3.self_attn.q_proj.weight  is  0.8474943663474598
+Dropout probability for layer  model.layers.3.self_attn.k_proj.weight  is  0.6037260313668911
+Dropout probability for layer  model.layers.3.self_attn.v_proj.weight  is  0.8071282732743802
+Dropout probability for layer  model.layers.3.self_attn.o_proj.weight  is  0.7297317866938179
+Dropout probability for layer  model.layers.3.mlp.gate_proj.weight  is  0.5362280914547007
+Dropout probability for layer  model.layers.3.mlp.up_proj.weight  is  0.9731157639793706
+Dropout probability for layer  model.layers.3.mlp.down_proj.weight  is  0.3785343772083535
+Dropout probability for layer  model.layers.3.input_layernorm.weight  is  0.552040631273227
+Dropout probability for layer  model.layers.3.post_attention_layernorm.weight  is  0.8294046642529949
+Dropout probability for layer  model.layers.4.self_attn.q_proj.weight  is  0.6185197523642461
+Dropout probability for layer  model.layers.4.self_attn.k_proj.weight  is  0.8617069003107772
+Dropout probability for layer  model.layers.4.self_attn.v_proj.weight  is  0.577352145256762
+Dropout probability for layer  model.layers.4.self_attn.o_proj.weight  is  0.7045718362149235
+Dropout probability for layer  model.layers.4.mlp.gate_proj.weight  is  0.045824383655662215
+Dropout probability for layer  model.layers.4.mlp.up_proj.weight  is  0.22789827565154686
+Dropout probability for layer  model.layers.4.mlp.down_proj.weight  is  0.28938796360210717
+Dropout probability for layer  model.layers.4.input_layernorm.weight  is  0.0797919769236275
+Dropout probability for layer  model.layers.4.post_attention_layernorm.weight  is  0.23279088636103018
+Dropout probability for layer  model.layers.5.self_attn.q_proj.weight  is  0.10100142940972912
+Dropping layer  model.layers.5.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.5.self_attn.k_proj.weight  is  0.2779736031100921
+Dropping layer  model.layers.5.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.5.self_attn.v_proj.weight  is  0.6356844442644002
+Dropout probability for layer  model.layers.5.self_attn.o_proj.weight  is  0.36483217897008424
+Dropping layer  model.layers.5.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.5.mlp.gate_proj.weight  is  0.37018096711688264
+Dropout probability for layer  model.layers.5.mlp.up_proj.weight  is  0.2095070307714877
+Dropout probability for layer  model.layers.5.mlp.down_proj.weight  is  0.26697782204911336
+Dropout probability for layer  model.layers.5.input_layernorm.weight  is  0.936654587712494
+Dropout probability for layer  model.layers.5.post_attention_layernorm.weight  is  0.6480353852465935
+Dropout probability for layer  model.layers.6.self_attn.q_proj.weight  is  0.6091310056669882
+Dropout probability for layer  model.layers.6.self_attn.k_proj.weight  is  0.171138648198097
+Dropping layer  model.layers.6.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.6.self_attn.v_proj.weight  is  0.7291267979503492
+Dropout probability for layer  model.layers.6.self_attn.o_proj.weight  is  0.1634024937619284
+Dropping layer  model.layers.6.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.6.mlp.gate_proj.weight  is  0.3794554417576478
+Dropout probability for layer  model.layers.6.mlp.up_proj.weight  is  0.9895233506365952
+Dropout probability for layer  model.layers.6.mlp.down_proj.weight  is  0.6399997598540929
+Dropout probability for layer  model.layers.6.input_layernorm.weight  is  0.5569497437746462
+Dropout probability for layer  model.layers.6.post_attention_layernorm.weight  is  0.6846142509898746
+Dropout probability for layer  model.layers.7.self_attn.q_proj.weight  is  0.8428519201898096
+Dropout probability for layer  model.layers.7.self_attn.k_proj.weight  is  0.7759999115462448
+Dropout probability for layer  model.layers.7.self_attn.v_proj.weight  is  0.22904807196410437
+Dropping layer  model.layers.7.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.7.self_attn.o_proj.weight  is  0.03210024390403776
+Dropping layer  model.layers.7.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.7.mlp.gate_proj.weight  is  0.3154530480590819
+Dropout probability for layer  model.layers.7.mlp.up_proj.weight  is  0.26774087597570273
+Dropout probability for layer  model.layers.7.mlp.down_proj.weight  is  0.21098284358632646
+Dropout probability for layer  model.layers.7.input_layernorm.weight  is  0.9429097143350544
+Dropout probability for layer  model.layers.7.post_attention_layernorm.weight  is  0.8763676264726689
+Dropout probability for layer  model.layers.8.self_attn.q_proj.weight  is  0.3146778807984779
+Dropping layer  model.layers.8.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.8.self_attn.k_proj.weight  is  0.65543866529488
+Dropout probability for layer  model.layers.8.self_attn.v_proj.weight  is  0.39563190106066426
+Dropping layer  model.layers.8.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.8.self_attn.o_proj.weight  is  0.9145475897405435
+Dropout probability for layer  model.layers.8.mlp.gate_proj.weight  is  0.4588518525873988
+Dropout probability for layer  model.layers.8.mlp.up_proj.weight  is  0.26488016649805246
+Dropout probability for layer  model.layers.8.mlp.down_proj.weight  is  0.24662750769398345
+Dropout probability for layer  model.layers.8.input_layernorm.weight  is  0.5613681341631508
+Dropout probability for layer  model.layers.8.post_attention_layernorm.weight  is  0.26274160852293527
+Dropout probability for layer  model.layers.9.self_attn.q_proj.weight  is  0.5845859902235405
+Dropout probability for layer  model.layers.9.self_attn.k_proj.weight  is  0.897822883602477
+Dropout probability for layer  model.layers.9.self_attn.v_proj.weight  is  0.39940050514039727
+Dropping layer  model.layers.9.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.9.self_attn.o_proj.weight  is  0.21932075915728333
+Dropping layer  model.layers.9.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.9.mlp.gate_proj.weight  is  0.9975376064951103
+Dropout probability for layer  model.layers.9.mlp.up_proj.weight  is  0.5095262936764645
+Dropout probability for layer  model.layers.9.mlp.down_proj.weight  is  0.09090941217379389
+Dropout probability for layer  model.layers.9.input_layernorm.weight  is  0.04711637542473457
+Dropout probability for layer  model.layers.9.post_attention_layernorm.weight  is  0.10964913035065915
+Dropout probability for layer  model.layers.10.self_attn.q_proj.weight  is  0.62744604170309
+Dropout probability for layer  model.layers.10.self_attn.k_proj.weight  is  0.7920793643629641
+Dropout probability for layer  model.layers.10.self_attn.v_proj.weight  is  0.42215996679968404
+Dropping layer  model.layers.10.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.10.self_attn.o_proj.weight  is  0.06352770615195713
+Dropping layer  model.layers.10.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.10.mlp.gate_proj.weight  is  0.38161928650653676
+Dropout probability for layer  model.layers.10.mlp.up_proj.weight  is  0.9961213802400968
+Dropout probability for layer  model.layers.10.mlp.down_proj.weight  is  0.529114345099137
+Dropout probability for layer  model.layers.10.input_layernorm.weight  is  0.9710783776136181
+Dropout probability for layer  model.layers.10.post_attention_layernorm.weight  is  0.8607797022344981
+Dropout probability for layer  model.layers.11.self_attn.q_proj.weight  is  0.011481021942819636
+Dropping layer  model.layers.11.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.11.self_attn.k_proj.weight  is  0.7207218193601946
+Dropout probability for layer  model.layers.11.self_attn.v_proj.weight  is  0.6817103690265748
+Dropout probability for layer  model.layers.11.self_attn.o_proj.weight  is  0.5369703304087952
+Dropout probability for layer  model.layers.11.mlp.gate_proj.weight  is  0.2668251899525428
+Dropout probability for layer  model.layers.11.mlp.up_proj.weight  is  0.6409617985798081
+Dropout probability for layer  model.layers.11.mlp.down_proj.weight  is  0.11155217359587644
+Dropout probability for layer  model.layers.11.input_layernorm.weight  is  0.434765250669105
+Dropout probability for layer  model.layers.11.post_attention_layernorm.weight  is  0.45372370632920644
+Dropout probability for layer  model.layers.12.self_attn.q_proj.weight  is  0.9538159275210801
+Dropout probability for layer  model.layers.12.self_attn.k_proj.weight  is  0.8758529403781941
+Dropout probability for layer  model.layers.12.self_attn.v_proj.weight  is  0.26338905075109076
+Dropping layer  model.layers.12.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.12.self_attn.o_proj.weight  is  0.5005861130502983
+Dropout probability for layer  model.layers.12.mlp.gate_proj.weight  is  0.17865188053013137
+Dropout probability for layer  model.layers.12.mlp.up_proj.weight  is  0.9126278393448205
+Dropout probability for layer  model.layers.12.mlp.down_proj.weight  is  0.8705185698367669
+Dropout probability for layer  model.layers.12.input_layernorm.weight  is  0.2984447914486329
+Dropout probability for layer  model.layers.12.post_attention_layernorm.weight  is  0.6389494948660052
+Dropout probability for layer  model.layers.13.self_attn.q_proj.weight  is  0.6089702114381723
+Dropout probability for layer  model.layers.13.self_attn.k_proj.weight  is  0.1528392685496348
+Dropping layer  model.layers.13.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.13.self_attn.v_proj.weight  is  0.7625108000751513
+Dropout probability for layer  model.layers.13.self_attn.o_proj.weight  is  0.5393790301196257
+Dropout probability for layer  model.layers.13.mlp.gate_proj.weight  is  0.7786264786305582
+Dropout probability for layer  model.layers.13.mlp.up_proj.weight  is  0.5303536721951775
+Dropout probability for layer  model.layers.13.mlp.down_proj.weight  is  0.0005718961279435053
+Dropout probability for layer  model.layers.13.input_layernorm.weight  is  0.3241560570046731
+Dropout probability for layer  model.layers.13.post_attention_layernorm.weight  is  0.019476742385832302
+Dropout probability for layer  model.layers.14.self_attn.q_proj.weight  is  0.9290986162646171
+Dropout probability for layer  model.layers.14.self_attn.k_proj.weight  is  0.8787218778231842
+Dropout probability for layer  model.layers.14.self_attn.v_proj.weight  is  0.8316655293611794
+Dropout probability for layer  model.layers.14.self_attn.o_proj.weight  is  0.30751412540266143
+Dropping layer  model.layers.14.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.14.mlp.gate_proj.weight  is  0.05792516649418755
+Dropout probability for layer  model.layers.14.mlp.up_proj.weight  is  0.8780095992040405
+Dropout probability for layer  model.layers.14.mlp.down_proj.weight  is  0.9469494452979941
+Dropout probability for layer  model.layers.14.input_layernorm.weight  is  0.08565345206787878
+Dropout probability for layer  model.layers.14.post_attention_layernorm.weight  is  0.4859904633166138
+Dropout probability for layer  model.layers.15.self_attn.q_proj.weight  is  0.06921251846838361
+Dropping layer  model.layers.15.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.15.self_attn.k_proj.weight  is  0.7606021652572316
+Dropout probability for layer  model.layers.15.self_attn.v_proj.weight  is  0.7658344293069878
+Dropout probability for layer  model.layers.15.self_attn.o_proj.weight  is  0.1283914644997628
+Dropping layer  model.layers.15.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.15.mlp.gate_proj.weight  is  0.4752823780987313
+Dropout probability for layer  model.layers.15.mlp.up_proj.weight  is  0.5498035934949439
+Dropout probability for layer  model.layers.15.mlp.down_proj.weight  is  0.2650566289400591
+Dropout probability for layer  model.layers.15.input_layernorm.weight  is  0.8724330410852574
+Dropout probability for layer  model.layers.15.post_attention_layernorm.weight  is  0.4231379402008869
+Dropout probability for layer  model.layers.16.self_attn.q_proj.weight  is  0.21179820544208205
+Dropping layer  model.layers.16.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.16.self_attn.k_proj.weight  is  0.5392960887794583
+Dropout probability for layer  model.layers.16.self_attn.v_proj.weight  is  0.7299310690899762
+Dropout probability for layer  model.layers.16.self_attn.o_proj.weight  is  0.2011510633896959
+Dropping layer  model.layers.16.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.16.mlp.gate_proj.weight  is  0.31171629130089495
+Dropout probability for layer  model.layers.16.mlp.up_proj.weight  is  0.9951493566608947
+Dropout probability for layer  model.layers.16.mlp.down_proj.weight  is  0.6498780576394535
+Dropout probability for layer  model.layers.16.input_layernorm.weight  is  0.43810008391450406
+Dropout probability for layer  model.layers.16.post_attention_layernorm.weight  is  0.5175758410355906
+Dropout probability for layer  model.layers.17.self_attn.q_proj.weight  is  0.12100419586826572
+Dropping layer  model.layers.17.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.17.self_attn.k_proj.weight  is  0.22469733703155736
+Dropping layer  model.layers.17.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.17.self_attn.v_proj.weight  is  0.33808556214745533
+Dropping layer  model.layers.17.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.17.self_attn.o_proj.weight  is  0.5883087184572333
+Dropout probability for layer  model.layers.17.mlp.gate_proj.weight  is  0.230114732596577
+Dropout probability for layer  model.layers.17.mlp.up_proj.weight  is  0.22021738445155947
+Dropout probability for layer  model.layers.17.mlp.down_proj.weight  is  0.07099308600903254
+Dropout probability for layer  model.layers.17.input_layernorm.weight  is  0.6311029572700989
+Dropout probability for layer  model.layers.17.post_attention_layernorm.weight  is  0.22894178381115438
+Dropout probability for layer  model.layers.18.self_attn.q_proj.weight  is  0.905420013006128
+Dropout probability for layer  model.layers.18.self_attn.k_proj.weight  is  0.8596354002537465
+Dropout probability for layer  model.layers.18.self_attn.v_proj.weight  is  0.07085734988865344
+Dropping layer  model.layers.18.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.18.self_attn.o_proj.weight  is  0.23800463436899522
+Dropping layer  model.layers.18.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.18.mlp.gate_proj.weight  is  0.6689777782962806
+Dropout probability for layer  model.layers.18.mlp.up_proj.weight  is  0.2142368073704386
+Dropout probability for layer  model.layers.18.mlp.down_proj.weight  is  0.132311848725025
+Dropout probability for layer  model.layers.18.input_layernorm.weight  is  0.935514240580671
+Dropout probability for layer  model.layers.18.post_attention_layernorm.weight  is  0.5710430933252845
+Dropout probability for layer  model.layers.19.self_attn.q_proj.weight  is  0.47267102631179414
+Dropping layer  model.layers.19.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.19.self_attn.k_proj.weight  is  0.7846194242907534
+Dropout probability for layer  model.layers.19.self_attn.v_proj.weight  is  0.8074969977666434
+Dropout probability for layer  model.layers.19.self_attn.o_proj.weight  is  0.1904099143618777
+Dropping layer  model.layers.19.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.19.mlp.gate_proj.weight  is  0.09693081422882333
+Dropout probability for layer  model.layers.19.mlp.up_proj.weight  is  0.4310511824063775
+Dropout probability for layer  model.layers.19.mlp.down_proj.weight  is  0.4235786230199208
+Dropout probability for layer  model.layers.19.input_layernorm.weight  is  0.467024668036675
+Dropout probability for layer  model.layers.19.post_attention_layernorm.weight  is  0.7290758494598506
+Dropout probability for layer  model.layers.20.self_attn.q_proj.weight  is  0.6733645472933015
+Dropout probability for layer  model.layers.20.self_attn.k_proj.weight  is  0.9841652113659661
+Dropout probability for layer  model.layers.20.self_attn.v_proj.weight  is  0.09841787115195888
+Dropping layer  model.layers.20.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.20.self_attn.o_proj.weight  is  0.4026212821022688
+Dropping layer  model.layers.20.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.20.mlp.gate_proj.weight  is  0.33930260539496315
+Dropout probability for layer  model.layers.20.mlp.up_proj.weight  is  0.8616725363527911
+Dropout probability for layer  model.layers.20.mlp.down_proj.weight  is  0.24865633392028563
+Dropout probability for layer  model.layers.20.input_layernorm.weight  is  0.1902089084408115
+Dropout probability for layer  model.layers.20.post_attention_layernorm.weight  is  0.4486135478331319
+Dropout probability for layer  model.layers.21.self_attn.q_proj.weight  is  0.4218816398344042
+Dropping layer  model.layers.21.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.21.self_attn.k_proj.weight  is  0.27854514466694047
+Dropping layer  model.layers.21.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.21.self_attn.v_proj.weight  is  0.2498064478821005
+Dropping layer  model.layers.21.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.21.self_attn.o_proj.weight  is  0.9232655992760128
+Dropout probability for layer  model.layers.21.mlp.gate_proj.weight  is  0.44313074505345695
+Dropout probability for layer  model.layers.21.mlp.up_proj.weight  is  0.8613491047618306
+Dropout probability for layer  model.layers.21.mlp.down_proj.weight  is  0.5503253124498481
+Dropout probability for layer  model.layers.21.input_layernorm.weight  is  0.05058832952488124
+Dropout probability for layer  model.layers.21.post_attention_layernorm.weight  is  0.9992824684127266
+Dropout probability for layer  model.layers.22.self_attn.q_proj.weight  is  0.8360275850799519
+Dropout probability for layer  model.layers.22.self_attn.k_proj.weight  is  0.9689962572847513
+Dropout probability for layer  model.layers.22.self_attn.v_proj.weight  is  0.9263669830081276
+Dropout probability for layer  model.layers.22.self_attn.o_proj.weight  is  0.8486957344143055
+Dropout probability for layer  model.layers.22.mlp.gate_proj.weight  is  0.16631111060391401
+Dropout probability for layer  model.layers.22.mlp.up_proj.weight  is  0.48564112545071847
+Dropout probability for layer  model.layers.22.mlp.down_proj.weight  is  0.21374729919918167
+Dropout probability for layer  model.layers.22.input_layernorm.weight  is  0.4010402925494526
+Dropout probability for layer  model.layers.22.post_attention_layernorm.weight  is  0.058635399972178925
+Dropout probability for layer  model.layers.23.self_attn.q_proj.weight  is  0.3789731189769161
+Dropping layer  model.layers.23.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.23.self_attn.k_proj.weight  is  0.9853088437797259
+Dropout probability for layer  model.layers.23.self_attn.v_proj.weight  is  0.26520305817215195
+Dropping layer  model.layers.23.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.23.self_attn.o_proj.weight  is  0.7840706019485694
+Dropout probability for layer  model.layers.23.mlp.gate_proj.weight  is  0.4550083673391433
+Dropout probability for layer  model.layers.23.mlp.up_proj.weight  is  0.4230074859901629
+Dropout probability for layer  model.layers.23.mlp.down_proj.weight  is  0.9573176408596732
+Dropout probability for layer  model.layers.23.input_layernorm.weight  is  0.9954226894927138
+Dropout probability for layer  model.layers.23.post_attention_layernorm.weight  is  0.5557683234056182
+Dropout probability for layer  model.layers.24.self_attn.q_proj.weight  is  0.718408275296326
+Dropout probability for layer  model.layers.24.self_attn.k_proj.weight  is  0.15479682527406413
+Dropping layer  model.layers.24.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.24.self_attn.v_proj.weight  is  0.2967078254945642
+Dropping layer  model.layers.24.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.24.self_attn.o_proj.weight  is  0.9687093649691588
+Dropout probability for layer  model.layers.24.mlp.gate_proj.weight  is  0.5791802908162562
+Dropout probability for layer  model.layers.24.mlp.up_proj.weight  is  0.5421952013742742
+Dropout probability for layer  model.layers.24.mlp.down_proj.weight  is  0.7479755603790641
+Dropout probability for layer  model.layers.24.input_layernorm.weight  is  0.05716527290748308
+Dropout probability for layer  model.layers.24.post_attention_layernorm.weight  is  0.5841775944589712
+Dropout probability for layer  model.layers.25.self_attn.q_proj.weight  is  0.5028503829195136
+Dropout probability for layer  model.layers.25.self_attn.k_proj.weight  is  0.8527198920482854
+Dropout probability for layer  model.layers.25.self_attn.v_proj.weight  is  0.15743272793948326
+Dropping layer  model.layers.25.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.25.self_attn.o_proj.weight  is  0.9607789032744504
+Dropout probability for layer  model.layers.25.mlp.gate_proj.weight  is  0.08011146524058688
+Dropout probability for layer  model.layers.25.mlp.up_proj.weight  is  0.1858249609807232
+Dropout probability for layer  model.layers.25.mlp.down_proj.weight  is  0.5950351064500277
+Dropout probability for layer  model.layers.25.input_layernorm.weight  is  0.6752125536040902
+Dropout probability for layer  model.layers.25.post_attention_layernorm.weight  is  0.2352038950009312
+Dropout probability for layer  model.layers.26.self_attn.q_proj.weight  is  0.11988661394712419
+Dropping layer  model.layers.26.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.26.self_attn.k_proj.weight  is  0.8902873141294375
+Dropout probability for layer  model.layers.26.self_attn.v_proj.weight  is  0.24621534778862486
+Dropping layer  model.layers.26.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.26.self_attn.o_proj.weight  is  0.5945191535334412
+Dropout probability for layer  model.layers.26.mlp.gate_proj.weight  is  0.6193815103321031
+Dropout probability for layer  model.layers.26.mlp.up_proj.weight  is  0.4192249153358725
+Dropout probability for layer  model.layers.26.mlp.down_proj.weight  is  0.5836722892912247
+Dropout probability for layer  model.layers.26.input_layernorm.weight  is  0.5227827155319589
+Dropout probability for layer  model.layers.26.post_attention_layernorm.weight  is  0.9347062577364272
+Dropout probability for layer  model.layers.27.self_attn.q_proj.weight  is  0.20425919942353643
+Dropping layer  model.layers.27.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.27.self_attn.k_proj.weight  is  0.7161918007894148
+Dropout probability for layer  model.layers.27.self_attn.v_proj.weight  is  0.23868595261584602
+Dropping layer  model.layers.27.self_attn.v_proj.weight
+Dropout probability for layer  model.layers.27.self_attn.o_proj.weight  is  0.3957858467912545
+Dropping layer  model.layers.27.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.27.mlp.gate_proj.weight  is  0.6716902229599713
+Dropout probability for layer  model.layers.27.mlp.up_proj.weight  is  0.2999970797987622
+Dropout probability for layer  model.layers.27.mlp.down_proj.weight  is  0.31617719627185403
+Dropout probability for layer  model.layers.27.input_layernorm.weight  is  0.7518644924144021
+Dropout probability for layer  model.layers.27.post_attention_layernorm.weight  is  0.07254311449315731
+Dropout probability for layer  model.layers.28.self_attn.q_proj.weight  is  0.4582855226185861
+Dropping layer  model.layers.28.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.28.self_attn.k_proj.weight  is  0.9984544408544423
+Dropout probability for layer  model.layers.28.self_attn.v_proj.weight  is  0.9960964478550944
+Dropout probability for layer  model.layers.28.self_attn.o_proj.weight  is  0.073260721099633
+Dropping layer  model.layers.28.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.28.mlp.gate_proj.weight  is  0.2131543122670404
+Dropout probability for layer  model.layers.28.mlp.up_proj.weight  is  0.26520041475040135
+Dropout probability for layer  model.layers.28.mlp.down_proj.weight  is  0.9332593779937091
+Dropout probability for layer  model.layers.28.input_layernorm.weight  is  0.8808641736864395
+Dropout probability for layer  model.layers.28.post_attention_layernorm.weight  is  0.8792702424845428
+Dropout probability for layer  model.layers.29.self_attn.q_proj.weight  is  0.36952708873888396
+Dropping layer  model.layers.29.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.29.self_attn.k_proj.weight  is  0.15774683235723197
+Dropping layer  model.layers.29.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.29.self_attn.v_proj.weight  is  0.833744954639807
+Dropout probability for layer  model.layers.29.self_attn.o_proj.weight  is  0.703539925087371
+Dropout probability for layer  model.layers.29.mlp.gate_proj.weight  is  0.6116777657259501
+Dropout probability for layer  model.layers.29.mlp.up_proj.weight  is  0.9872330636315043
+Dropout probability for layer  model.layers.29.mlp.down_proj.weight  is  0.6539763177107326
+Dropout probability for layer  model.layers.29.input_layernorm.weight  is  0.007823107152157949
+Dropout probability for layer  model.layers.29.post_attention_layernorm.weight  is  0.8171041351154616
+Dropout probability for layer  model.layers.30.self_attn.q_proj.weight  is  0.2993787521999779
+Dropping layer  model.layers.30.self_attn.q_proj.weight
+Dropout probability for layer  model.layers.30.self_attn.k_proj.weight  is  0.6633887149660773
+Dropout probability for layer  model.layers.30.self_attn.v_proj.weight  is  0.9389300039271039
+Dropout probability for layer  model.layers.30.self_attn.o_proj.weight  is  0.13429111439336772
+Dropping layer  model.layers.30.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.30.mlp.gate_proj.weight  is  0.11542867041910221
+Dropout probability for layer  model.layers.30.mlp.up_proj.weight  is  0.10703597770941764
+Dropout probability for layer  model.layers.30.mlp.down_proj.weight  is  0.5532236408848159
+Dropout probability for layer  model.layers.30.input_layernorm.weight  is  0.2723482123148163
+Dropout probability for layer  model.layers.30.post_attention_layernorm.weight  is  0.6048298270302239
+Dropout probability for layer  model.layers.31.self_attn.q_proj.weight  is  0.7176121871387979
+Dropout probability for layer  model.layers.31.self_attn.k_proj.weight  is  0.20359731232745293
+Dropping layer  model.layers.31.self_attn.k_proj.weight
+Dropout probability for layer  model.layers.31.self_attn.v_proj.weight  is  0.6342379588850797
+Dropout probability for layer  model.layers.31.self_attn.o_proj.weight  is  0.2639839016304094
+Dropping layer  model.layers.31.self_attn.o_proj.weight
+Dropout probability for layer  model.layers.31.mlp.gate_proj.weight  is  0.48853185214937656
+Dropout probability for layer  model.layers.31.mlp.up_proj.weight  is  0.9053364910793232
+Dropout probability for layer  model.layers.31.mlp.down_proj.weight  is  0.8461037132948555
+Dropout probability for layer  model.layers.31.input_layernorm.weight  is  0.09229846771273342
+Dropout probability for layer  model.layers.31.post_attention_layernorm.weight  is  0.42357577256372636
+Dropout probability for layer  model.norm.weight  is  0.27668022397225167
+Dropout probability for layer  lm_head.weight  is  0.0035456890877823
+2025-03-28:13:33:26,639 INFO     [evaluator.py:164] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2025-03-28:13:33:26,639 INFO     [evaluator.py:217] Using pre-initialized model
+2025-03-28:13:34:02,129 INFO     [task.py:415] Building contexts for hellaswag on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 3313.04it/s]
+2025-03-28:13:34:02,137 INFO     [evaluator.py:489] Running loglikelihood requests
+Running loglikelihood requests:   0%|          | 0/40 [00:00<?, ?it/s]Running loglikelihood requests:   2%|▎         | 1/40 [00:00<00:12,  3.24it/s]Running loglikelihood requests:   8%|▊         | 3/40 [00:00<00:04,  8.39it/s]Running loglikelihood requests:  22%|██▎       | 9/40 [00:00<00:01, 23.33it/s]Running loglikelihood requests:  35%|███▌      | 14/40 [00:00<00:00, 31.04it/s]Running loglikelihood requests:  50%|█████     | 20/40 [00:00<00:00, 38.34it/s]Running loglikelihood requests:  65%|██████▌   | 26/40 [00:00<00:00, 43.18it/s]Running loglikelihood requests:  80%|████████  | 32/40 [00:00<00:00, 46.52it/s]Running loglikelihood requests:  95%|█████████▌| 38/40 [00:01<00:00, 48.90it/s]Running loglikelihood requests: 100%|██████████| 40/40 [00:01<00:00, 36.00it/s]
+{'hellaswag': {'alias': 'hellaswag', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466, 'acc_norm,none': 0.5, 'acc_norm_stderr,none': 0.16666666666666666}}
+None
+---------------------------------------
+Begin Slurm Epilog: Mar-28-2025 13:34:12
+Job ID:        2381653
+User ID:       mtalreja6
+Account:       coc
+Job name:      LayerSkipWithLayerDrop
+Resources:     cpu=4,gres/gpu:h100=1,mem=30G,node=1
+Rsrc Used:     cput=00:12:48,vmem=0,walltime=00:03:12,mem=142180K,energy_used=0
+Partition:     ice-gpu
+QOS:           coc-ice
+Nodes:         atl1-1-03-013-8-0
+---------------------------------------
