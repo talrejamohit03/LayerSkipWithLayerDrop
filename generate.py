@@ -64,9 +64,6 @@ def load_model_and_tokenizer(args: Arguments, device: str = "auto"):
         device_map="auto",
         torch_dtype=torch.float16,
     )
-    #DatasetFormat.datasetyouneed
-    prune_model = PruneModel(model, args, DatasetFormat.CNN_DM_SUMMARIZATION)
-    new_model_dict = prune_model.prune_state_dict(prefix="blocks", n=1)
     """
     new_model_dict = {}
     for k, v in model.state_dict().items():
@@ -76,9 +73,9 @@ def load_model_and_tokenizer(args: Arguments, device: str = "auto"):
             new_model_dict[k] = v
         else:
             print("Dropping layer ", k)
-    """
     model.load_state_dict(new_model_dict, strict=False)
     model.eval()
+    """
 
     return model, tokenizer
 

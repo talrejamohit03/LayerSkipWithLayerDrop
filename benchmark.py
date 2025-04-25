@@ -26,6 +26,7 @@ from data import get_data, LowercaseProcessingFunction, get_valid_dataset_format
 from generate import load_model_and_tokenizer, setup
 from utils import ROUGEScoreWrapper
 
+from pruned_model import PruneModel
 import arguments
 from arguments import Arguments, simple_parse_args_string
 from self_speculation.autoregressive_generator import AutoRegressiveGenerationStrategy
@@ -155,6 +156,7 @@ class EvaluationMetrics:
 def benchmark(
         model: torch.nn.Module, 
         tokenizer: transformers.PreTrainedTokenizerBase, 
+        evaluation_set,
         benchmark_arguments: BenchmarkArguments, 
         generation_config: GenerationConfig,
         seed = None,
@@ -173,6 +175,7 @@ def benchmark(
         tokenizer=tokenizer, model=model, generation_strategy=generation_strategy
     )
 
+    """"
     evaluation_set = get_data(
         random_shuffle=benchmark_arguments.random_shuffle,
         num_samples=benchmark_arguments.num_samples,
@@ -182,6 +185,7 @@ def benchmark(
         data_path=benchmark_arguments.data_path,
         template=benchmark_arguments.template,
     )
+    """
     metrics = EvaluationMetrics.build_metrics()
     for i, example in enumerate(tqdm(evaluation_set)):
         response: GenerationResult = generator.generate(
@@ -216,8 +220,27 @@ def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_co
 
     # Setup and Run Benchmark
     setup(args, device=device)
+
+    seed = None
+    #get dataset outside of benchmark() because we need to give it to PruneModel
+    evaluation_set = get_data(
+        random_shuffle=benchmark_arguments.random_shuffle,
+        num_samples=benchmark_arguments.num_samples,
+        dataset=benchmark_arguments.dataset,
+        n_shot=benchmark_arguments.n_shot,
+        seed=seed,
+        data_path=benchmark_arguments.data_path,
+        template=benchmark_arguments.template,
+    )
+
     model, tokenizer = load_model_and_tokenizer(args, device=device)
-    metric_result = benchmark(model, tokenizer, benchmark_arguments, generation_config)
+    #call PruneModel to prune model's state_dict
+    prune_model = PruneModel(model, evaluation_set, n=3)
+    new_model_dict = prune_model.prune_state_dict(prefix="blocks")
+    model.load_state_dict(new_model_dict, strict=False)
+    model.eval()
+
+    metric_result = benchmark(model, tokenizer, evaluation_set, benchmark_arguments, generation_config)
     print(metric_result)
 
     # Save config and results to file
