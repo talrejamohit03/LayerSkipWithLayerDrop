@@ -1,0 +1,170 @@
+---------------------------------------
+Begin Slurm Prolog: Apr-26-2025 16:50:45
+Job ID:    2538942
+User ID:   mtalreja6
+Account:   coc
+Job name:  LayerSkipWithLayerDrop
+Partition: ice-gpu
+QOS:       coc-ice
+---------------------------------------
+/var/lib/slurm/slurmd/job2538942/slurm_script: line 14: huggingface-cli: command not found
+/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/python
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    sys.exit(main())
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    result = agent.run()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = agent.run()
+    result = agent.run()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = self._invoke_run(role)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    result = self._invoke_run(role)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    result = self._invoke_run(role)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    self._initialize_workers(self._worker_group)
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    self._rendezvous(worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._rendezvous(worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._rendezvous(worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+srun: error: atl1-1-03-012-18-0: tasks 0-2: Exited with exit code 1
+/home/hice1/mtalreja6/.local/lib/python3.10/site-packages/torchvision/io/image.py:14: UserWarning: Failed to load image Python extension: '/home/hice1/mtalreja6/.local/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN2at4_ops9from_file4callESt17basic_string_viewIcSt11char_traitsIcEESt8optionalIbES6_IlES6_IN3c1010ScalarTypeEES6_INS9_6LayoutEES6_INS9_6DeviceEES7_'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:08<00:16,  8.41s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:17<00:08,  8.96s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:23<00:00,  7.35s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:23<00:00,  7.73s/it]
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/benchmark.py", line 271, in <module>
+[rank0]:     main(args, benchmark_arguments, generation_config, f"{args.output_dir}/benchmark_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
+[rank0]:   File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/benchmark.py", line 238, in main
+[rank0]:     prune_model = PruneModel(model, evaluation_set, n=3)
+[rank0]:   File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/pruned_model.py", line 17, in __init__
+[rank0]:     self.l_star = self.find_prune_point()
+[rank0]:   File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/pruned_model.py", line 55, in find_prune_point
+[rank0]:     acts = self.grab_activations()
+[rank0]:   File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/pruned_model.py", line 46, in grab_activations
+[rank0]:     for xb, *_ in self.data_loader:
+[rank0]:   File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:   File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 673, in _next_data
+[rank0]:     data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+[rank0]:   File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 55, in fetch
+[rank0]:     return self.collate_fn(data)
+[rank0]:   File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 317, in default_collate
+[rank0]:     return collate(batch, collate_fn_map=default_collate_fn_map)
+[rank0]:   File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 192, in collate
+[rank0]:     raise TypeError(default_collate_err_msg_format.format(elem_type))
+[rank0]: TypeError: default_collate: batch must contain tensors, numpy arrays, numbers, dicts or lists; found <class 'data.EvaluationExample'>
+E0426 16:52:35.753000 23456246740800 torch/distributed/elastic/multiprocessing/api.py:833] failed (exitcode: 1) local_rank: 0 (pid: 3334987) of binary: /storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/python
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+benchmark.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-04-26_16:52:35
+  host      : atl1-1-03-012-18-0.pace.gatech.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3334987)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: atl1-1-03-012-18-0: task 3: Exited with exit code 1
+---------------------------------------
+Begin Slurm Epilog: Apr-26-2025 16:52:36
+Job ID:        2538942
+User ID:       mtalreja6
+Account:       coc
+Job name:      LayerSkipWithLayerDrop
+Resources:     cpu=4,gres/gpu:h100=1,mem=30G,node=1
+Rsrc Used:     cput=00:07:20,vmem=0,walltime=00:01:50,mem=140212K,energy_used=0
+Partition:     ice-gpu
+QOS:           coc-ice
+Nodes:         atl1-1-03-012-18-0
+---------------------------------------
