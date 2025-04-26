@@ -1,27 +1,52 @@
-from data import get_data, DatasetFormat
-
-
 import torch
 from torch.utils.data import DataLoader
 import torch.nn.functional as F
+from transformers import AutoTokenizer, PreTrainedTokenizer
 from collections import defaultdict
 import re
 
 class PruneModel:
 
-    def __init__(self, model, dataset, n=1):
+    def __init__(self, model, dataset, n=1, tokenizer=None):
         self.n = n
         self.model = model
         self.dataset = dataset
-        self.dataLoader = self.buildDataLoader()
+
+
+        # tokenizer logic
+        if tokenizer is None:
+            ckpt = getattr(model.config, "name_or_path", None)
+            if not ckpt:
+                raise ValueError("Please either pass `tokenizer=` or use a pretrained model with config.name_or_path set")
+            tokenizer = ckpt
+
+        # allow either a tokenizer instance or a string name
+        if isinstance(tokenizer, PreTrainedTokenizer):
+            self.tokenizer = tokenizer
+        else:
+            self.tokenizer = AutoTokenizer.from_pretrained(tokenizer)
+
+        if self.tokenizer.pad_token is None:
+            # use eos_token as pad, if available
+            if self.tokenizer.eos_token is not None:
+                self.tokenizer.pad_token = self.tokenizer.eos_token
+            else:
+                # else: create a new [PAD] token
+                self.tokenizer.add_special_tokens({'pad_token': '[PAD]'})
+        
+        self.dataloader = self.buildDataLoader()
         self.l_star = self.find_prune_point()
 
 
-    def collate_fn(batch):
-        return {
-            "inputs":  [ex.input  for ex in batch],
-            "outputs": [ex.output for ex in batch],
-        }
+    def collate_fn(self, batch):
+        texts = [ex.input for ex in batch]
+        return self.tokenizer(
+            texts,
+            return_tensors="pt",
+            padding=True,
+            truncation=True,
+            max_length=512,
+        )
     
     def buildDataLoader(self):
         dl = DataLoader(
@@ -39,27 +64,30 @@ class PruneModel:
         return (1.0 / torch.pi) * torch.acos(cos)  
 
     def grab_activations(self):
-        acts = defaultdict(list)
+        acts  = defaultdict(list)
         hooks = []
-        for i, blk in enumerate(self.model.blocks):    
+        for i, blk in enumerate(self.model.model.layers):
             hooks.append(
                 blk.register_forward_pre_hook(
-                    lambda mod, inp, idx=i: acts[idx].append(inp[0].detach())
+                    lambda mod, inp, idx=i: acts[idx].append(inp[0].detach().cpu())
                 )
             )
+
+        device = next(self.model.parameters()).device
         self.model.eval()
         with torch.no_grad():
-            for xb, *_ in self.dataloader:
-                self.model(xb)
+            for batch in self.dataloader:
+                batch = {k: t.to(device) for k, t in batch.items()}
+                self.model(**batch)
+
         for h in hooks: h.remove()
-        # stack into tensors of shape [B_total, T, D]
         for i in acts:
             acts[i] = torch.cat(acts[i], dim=0)
         return acts
     
     def find_prune_point(self):
         acts = self.grab_activations()
-        L = len(self.model.blocks) - self.n
+        L = len(self.model.model.layers) - self.n
         avg_dist = []
         for l in range(L):
             a = acts[l][:, -1, :]    # last token
@@ -71,7 +99,7 @@ class PruneModel:
         pat = re.compile(rf"{prefix}\.(\d+)\.")
         sd = self.model.state_dict()
         new_sd = {}
-        for k, v in sd:
+        for k, v in sd.items():
             m = pat.match(k)
             if m and self.l_star <= int(m.group(1)) < self.l_star + self.n:
                 continue
