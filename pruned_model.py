@@ -112,9 +112,11 @@ class PruneModel:
 
     
     def prune_module_list(self):
+        print(type(self.model.model.layers))
         kept = [
             blk for i, blk in enumerate(self.model.model.layers)
             if not (self.l_star <= i < self.l_star + self.n)
         ]
+        
         self.model.model.layers = nn.ModuleList(kept)
         self.model.config.num_hidden_layers = len(kept)

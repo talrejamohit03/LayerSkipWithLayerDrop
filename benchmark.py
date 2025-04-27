@@ -272,7 +272,7 @@ def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_co
     #call PruneModel to prune model's state_dict AND MODULE LIST
     prune_model = PruneModel(model, evaluation_set, n=3)
     prune_model.prune_state_dict()
-    prune_model.prune_module_list()
+    #prune_model.prune_module_list()
 
     
     after = count_attention_layers(prune_model.model.state_dict(), prefix="self_attn")
