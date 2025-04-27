@@ -17,6 +17,7 @@ import torch
 import traceback
 import transformers
 import os
+import torch.nn as nn
 
 from arguments import Arguments, simple_parse_args_string
 from self_speculation.autoregressive_generator import AutoRegressiveGenerationStrategy
@@ -62,16 +63,15 @@ def load_model_and_tokenizer(args: Arguments, device: str = "auto"):
         device_map="auto",
         torch_dtype=torch.float16,
     )
-    new_model_dict = {}
-    for k, v in model.state_dict().items():
+    layer_drop_model_layers = []
+    for layer in model.model.layers:
         dropout_probability = random.uniform(0, 1)
-        print("Dropout probability for layer ", k, " is ", dropout_probability)
-        if 'self_attn' not in k or (dropout_probability > 0.5):
-            new_model_dict[k] = v
+        print("Layer is ", layer, " with dropout probability ", dropout_probability)
+        if dropout_probability > 0.5:
+            layer_drop_model_layers.append(layer)
         else:
-            print("Dropping layer ", k)
-    
-    model.load_state_dict(new_model_dict, strict=False)
+            print("Dropping layer ", layer)
+    model.model.layers = nn.ModuleList(layer_drop_model_layers)
     model.eval()
 
     return model, tokenizer
