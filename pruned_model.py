@@ -6,10 +6,14 @@ import torch.nn.utils.prune as prune
 from transformers import AutoTokenizer, PreTrainedTokenizer
 from collections import defaultdict
 import re
+import random
 
 class PruneModel:
 
-    def __init__(self, model, dataset, n=1, tokenizer=None):
+    def __init__(self, model, dataset, n=1, tokenizer=None, dropout_threshold=0.5, dropout_seed=123):
+        self.dropout_threshold = dropout_threshold
+        self.dropout_seed = dropout_seed
+        random.seed(dropout_seed)
         self.n = n
         self.model = model
         self.dataset = dataset
@@ -115,18 +119,41 @@ class PruneModel:
                 prune.ln_structured(module, name="weight", amount=1.0, n=2, dim=0)
                 #prune.ln_structured(module, name="bias",   amount=1.0, n=1, dim=0)
 
-    def prune_nn(self):
+    def angular_distance_prune(self):
         #masks
-        for i in range(self.l_star, self.l_star + self.n):
+        layer_len = len(self.model.model.layers)
+        upper_threshold = min(layer_len, self.l_star + self.n)
+        for i in range(self.l_star, upper_threshold):
             block = self.model.model.layers[i]
             self.prune_entire_layer(block)
 
         #remove pruning re-parametrization so that state_dict() is updated
-        for i in range(self.l_star, self.l_star + self.n):
+        for i in range(self.l_star, upper_threshold):
             block = self.model.model.layers[i]
             for module in block.modules():
                 if isinstance(module, nn.Linear):
                     prune.remove(module, "weight")
                     #prune.remove(module, "bias")
+    
+    def randomized_dropout(self):
+        self.dropped_layers = []
+        layer_len = len(self.model.model.layers)
+
+        #masks
+        for i in range(layer_len):
+            curr_dropout_prob = random.uniform(0, 1)
+            if (curr_dropout_prob < self.dropout_threshold):
+                self.prune_entire_layer(self.model.model.layers[i])
+                self.dropped_layers.append(i)
+        
+        #remove pruning re-parametrization so that state_dict() is updated
+        for i in self.dropped_layers:
+            block = self.model.model.layers[i]
+            for module in block.modules():
+                if isinstance(module, nn.Linear):
+                    prune.remove(module, "weight")
+                    #prune.remove(module, "bias")
+
+
     
     

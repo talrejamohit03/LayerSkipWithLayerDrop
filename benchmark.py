@@ -208,8 +208,20 @@ def benchmark(
 
     return metric_result
 
-def verify_pruned_weights(prune_model, model):
-    for i in range (prune_model.l_star, prune_model.l_star + prune_model.n):
+def verify_pruned_weights_angular_dist(prune_model, model):
+    print(f"Prune Point / L Star: {prune_model.l_star}")
+    print(f"N: {prune_model.n}")
+    upper_threshold = min(len(prune_model.model.model.layers), prune_model.l_star + prune_model.n)
+    for i in range (prune_model.l_star, upper_threshold):
+        print("Layer: " + str(i))
+        layer_prefix = "model.layers." + str(i) + "."
+        for name, tensor in model.state_dict().items():
+            if name.startswith(layer_prefix):
+                print(f"{name[len(layer_prefix):]:30s} {tuple(tensor.shape)}  norm={tensor.norm().item():.4f}")
+
+def verify_pruned_weights_randomized_dropout(prune_model, model):
+    print(f"Dropped Layers: {prune_model.dropped_layers}")
+    for i in prune_model.dropped_layers:
         print("Layer: " + str(i))
         layer_prefix = "model.layers." + str(i) + "."
         for name, tensor in model.state_dict().items():
@@ -245,21 +257,20 @@ def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_co
     model, tokenizer = load_model_and_tokenizer(args, device=device)
 
 
-    #call PruneModel to prune model's state_dict
-    prune_model = PruneModel(model, evaluation_set, n=3)
-    prune_model.prune_nn()
+    #initialize PruneModel class, set dropout_threshold for randomized dropout
+    prune_model = PruneModel(model, evaluation_set, n=4)
+    
+    #choose angular distance or randomized drop here
+    prune_model.angular_distance_prune()
+    #prune_model.randomized_dropout()
     model.eval()
 
     print("******************************************************")
 
-    
-    
-    print(f"Prune Point / L Star: {prune_model.l_star}")
-    print(f"N: {prune_model.n}")
 
-
-    print("PRUNED LAYER NORMS AFTER PRUNE_NN()")
-    verify_pruned_weights(prune_model, model)
+    print("PRUNED LAYER NORMS")
+    #verify_pruned_weights_randomized_dropout(prune_model, model)
+    verify_pruned_weights_angular_dist(prune_model, model)
 
     print("******************************************************")
 
