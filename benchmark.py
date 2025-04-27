@@ -253,7 +253,7 @@ def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_co
 
     model, tokenizer = load_model_and_tokenizer(args, device=device)
 
-    before = count_attention_layers(model.state_dict(), prefix="self_attn")
+    before = count_attention_layers(model.state_dict())
     orig_idxs   = unique_layer_indices(model.state_dict())
 
     print("-------------------------------------------------------------")
@@ -262,11 +262,16 @@ def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_co
     #call PruneModel to prune model's state_dict
     prune_model = PruneModel(model, evaluation_set, n=3)
     new_model_dict = prune_model.prune_state_dict()
+    after_dict = count_attention_layers(new_model_dict)
+    print(f"Layers in pruned dict after prune: {after_dict}")
+    
     model.load_state_dict(new_model_dict, strict=False)
     model.eval()
     
-    after = count_attention_layers(model.state_dict())
-    print(f"Layers after  prune: {after}")
+    after_model = count_attention_layers(model.state_dict())
+    print(f"Layers in model after prune: {after_model}")
+    
+
     print(f"Prune Point / L Star: {prune_model.l_star}")
 
     
