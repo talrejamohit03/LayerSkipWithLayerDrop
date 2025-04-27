@@ -45,7 +45,7 @@ class PruneModel:
             return_tensors="pt",
             padding=True,
             truncation=True,
-            max_length=512,
+            max_length=512,     
         )
     
     def buildDataLoader(self):
@@ -95,13 +95,15 @@ class PruneModel:
             avg_dist.append(self.angular_distance(a, b).mean().item() )
         return int(torch.tensor(avg_dist).argmin().item())
 
-    def prune_state_dict(self, prefix="self_attn"):
-        pat = re.compile(rf"{prefix}\.(\d+)\.")
-        sd = self.model.state_dict()
+    def prune_state_dict(self):
+        #drop whole layer
+        pat = re.compile(r"\.layers\.(\d+)\.")
         new_sd = {}
-        for k, v in sd.items():
-            m = pat.match(k)
-            if m and self.l_star <= int(m.group(1)) < self.l_star + self.n:
-                continue
+        for k, v in self.model.state_dict().items():
+            m = pat.search(k)
+            if m:
+                idx = int(m.group(1))
+                if self.l_star <= idx < self.l_star + self.n:
+                    continue
             new_sd[k] = v
         return new_sd

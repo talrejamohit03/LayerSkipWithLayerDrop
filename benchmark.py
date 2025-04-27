@@ -5,6 +5,7 @@
 # LICENSE file in the root directory of this source tree.
 #
 
+import re
 import datetime
 import json
 import os
@@ -207,6 +208,23 @@ def benchmark(
 
     return metric_result
 
+def count_attention_layers(sd, prefix="self_attn"):
+    pattern = re.compile(rf"\.layers\.(\d+)\.{prefix}\.")
+    idxs = set()
+    for k in sd:
+        m = pattern.search(k)
+        if m:
+            idxs.add(int(m.group(1)))
+    return len(idxs)
+
+def unique_layer_indices(sd):
+    pat  = re.compile(r"\.layers\.(\d+)\.")
+    idxs = set()
+    for k in sd:
+        m = pat.search(k)
+        if m:
+            idxs.add(int(m.group(1)))
+    return idxs
 
 def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_config: GenerationConfig, output_fname: str):
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -234,9 +252,31 @@ def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_co
     )
 
     model, tokenizer = load_model_and_tokenizer(args, device=device)
+
+    before = count_attention_layers(model.state_dict(), prefix="self_attn")
+    orig_idxs   = unique_layer_indices(model.state_dict())
+
+    print("-------------------------------------------------------------")
+    print(f"Layers before prune: {before}")
+
     #call PruneModel to prune model's state_dict
     prune_model = PruneModel(model, evaluation_set, n=3)
-    new_model_dict = prune_model.prune_state_dict(prefix="self_attn")
+    new_model_dict = prune_model.prune_state_dict()
+
+    
+    after = count_attention_layers(new_model_dict, prefix="self_attn")
+    print(f"Layers after  prune: {after}")
+    print(f"Prune Point / L Star: {prune_model.l_star}")
+
+    
+    pruned_idxs = unique_layer_indices(new_model_dict)
+
+    dropped_idxs = sorted(orig_idxs - pruned_idxs)
+    print("Dropped layer indices:", dropped_idxs)
+    print("Number dropped      :", len(dropped_idxs))
+
+    print("-------------------------------------------------------------") 
+
     model.load_state_dict(new_model_dict, strict=False)
     model.eval()
 
