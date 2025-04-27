@@ -208,8 +208,8 @@ def benchmark(
 
     return metric_result
 
-def count_attention_layers(sd, prefix="self_attn"):
-    pattern = re.compile(rf"\.layers\.(\d+)\.{prefix}\.")
+def count_attention_layers(sd):
+    pattern = re.compile(r"\.layers\.(\d+)\.")
     idxs = set()
     for k in sd:
         m = pattern.search(k)
@@ -262,14 +262,15 @@ def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_co
     #call PruneModel to prune model's state_dict
     prune_model = PruneModel(model, evaluation_set, n=3)
     new_model_dict = prune_model.prune_state_dict()
-
+    model.load_state_dict(new_model_dict, strict=False)
+    model.eval()
     
-    after = count_attention_layers(new_model_dict, prefix="self_attn")
+    after = count_attention_layers(model.state_dict())
     print(f"Layers after  prune: {after}")
     print(f"Prune Point / L Star: {prune_model.l_star}")
 
     
-    pruned_idxs = unique_layer_indices(new_model_dict)
+    pruned_idxs = unique_layer_indices(model.state_dict())
 
     dropped_idxs = sorted(orig_idxs - pruned_idxs)
     print("Dropped layer indices:", dropped_idxs)
