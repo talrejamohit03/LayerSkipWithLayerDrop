@@ -208,23 +208,14 @@ def benchmark(
 
     return metric_result
 
-def count_attention_layers(sd):
-    pattern = re.compile(r"\.layers\.(\d+)\.")
-    idxs = set()
-    for k in sd:
-        m = pattern.search(k)
-        if m:
-            idxs.add(int(m.group(1)))
-    return len(idxs)
+def verify_pruned_weights(prune_model, model):
+    for i in range (prune_model.l_star, prune_model.l_star + prune_model.n):
+        print("Layer: " + str(i))
+        layer_prefix = "model.layers." + str(i) + "."
+        for name, tensor in model.state_dict().items():
+            if name.startswith(layer_prefix):
+                print(f"{name[len(layer_prefix):]:30s} {tuple(tensor.shape)}  norm={tensor.norm().item():.4f}")
 
-def unique_layer_indices(sd):
-    pat  = re.compile(r"\.layers\.(\d+)\.")
-    idxs = set()
-    for k in sd:
-        m = pat.search(k)
-        if m:
-            idxs.add(int(m.group(1)))
-    return idxs
 
 def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_config: GenerationConfig, output_fname: str):
     device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -253,38 +244,25 @@ def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_co
 
     model, tokenizer = load_model_and_tokenizer(args, device=device)
 
-    before = count_attention_layers(model.state_dict())
-    orig_idxs   = unique_layer_indices(model.state_dict())
-
-    print("-------------------------------------------------------------")
-    print(f"Layers before prune: {before}")
 
     #call PruneModel to prune model's state_dict
     prune_model = PruneModel(model, evaluation_set, n=3)
-    new_model_dict = prune_model.prune_state_dict()
-    after_dict = count_attention_layers(new_model_dict)
-    print(f"Layers in pruned dict after prune: {after_dict}")
-    
-    model.load_state_dict(new_model_dict, strict=False)
+    prune_model.prune_nn()
     model.eval()
-    
-    after_model = count_attention_layers(model.state_dict())
-    print(f"Layers in model after prune: {after_model}")
-    
 
+    print("******************************************************")
+
+    
+    
     print(f"Prune Point / L Star: {prune_model.l_star}")
+    print(f"N: {prune_model.n}")
 
-    
-    pruned_idxs = unique_layer_indices(model.state_dict())
 
-    dropped_idxs = sorted(orig_idxs - pruned_idxs)
-    print("Dropped layer indices:", dropped_idxs)
-    print("Number dropped      :", len(dropped_idxs))
+    print("PRUNED LAYER NORMS AFTER PRUNE_NN()")
+    verify_pruned_weights(prune_model, model)
 
-    print("-------------------------------------------------------------") 
+    print("******************************************************")
 
-    model.load_state_dict(new_model_dict, strict=False)
-    model.eval()
 
     metric_result = benchmark(model, tokenizer, evaluation_set, benchmark_arguments, generation_config)
     print(metric_result)

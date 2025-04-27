@@ -1,6 +1,8 @@
 import torch
+import torch.nn as nn
 from torch.utils.data import DataLoader
 import torch.nn.functional as F
+import torch.nn.utils.prune as prune
 from transformers import AutoTokenizer, PreTrainedTokenizer
 from collections import defaultdict
 import re
@@ -20,7 +22,6 @@ class PruneModel:
                 raise ValueError("Please either pass `tokenizer=` or use a pretrained model with config.name_or_path set")
             tokenizer = ckpt
 
-        # allow either a tokenizer instance or a string name
         if isinstance(tokenizer, PreTrainedTokenizer):
             self.tokenizer = tokenizer
         else:
@@ -90,7 +91,7 @@ class PruneModel:
         L = len(self.model.model.layers) - self.n
         avg_dist = []
         for l in range(L):
-            a = acts[l][:, -1, :]    # last token
+            a = acts[l][:, -1, :]
             b = acts[l+self.n][:, -1, :]
             avg_dist.append(self.angular_distance(a, b).mean().item() )
         return int(torch.tensor(avg_dist).argmin().item())
@@ -107,3 +108,25 @@ class PruneModel:
                     continue
             new_sd[k] = v
         return new_sd
+    
+    def prune_entire_layer(self, layer: nn.Module):
+        for module in layer.modules():
+            if isinstance(module, nn.Linear):
+                prune.ln_structured(module, name="weight", amount=1.0, n=2, dim=0)
+                #prune.ln_structured(module, name="bias",   amount=1.0, n=1, dim=0)
+
+    def prune_nn(self):
+        #masks
+        for i in range(self.l_star, self.l_star + self.n):
+            block = self.model.model.layers[i]
+            self.prune_entire_layer(block)
+
+        #remove pruning re-parametrization so that state_dict() is updated
+        for i in range(self.l_star, self.l_star + self.n):
+            block = self.model.model.layers[i]
+            for module in block.modules():
+                if isinstance(module, nn.Linear):
+                    prune.remove(module, "weight")
+                    #prune.remove(module, "bias")
+    
+    
