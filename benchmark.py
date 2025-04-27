@@ -226,6 +226,12 @@ def unique_layer_indices(sd):
             idxs.add(int(m.group(1)))
     return idxs
 
+def print_module_layers(model, title=""):
+    layers = model.model.layers
+    print(f"{title} ({len(layers)} layers):")
+    for i, blk in enumerate(layers):
+        print(f"  [{i:2d}] {blk.__class__.__name__}")
+
 def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_config: GenerationConfig, output_fname: str):
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -257,28 +263,33 @@ def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_co
     orig_idxs   = unique_layer_indices(model.state_dict())
 
     print("-------------------------------------------------------------")
-    print(f"Layers before prune: {before}")
+    print(f"Number of State Dict Layers before prune: {before}")
+    print("Module List Before:")
+    print_module_layers(model)
 
-    #call PruneModel to prune model's state_dict
+    print("**************************************************************")
+
+    #call PruneModel to prune model's state_dict AND MODULE LIST
     prune_model = PruneModel(model, evaluation_set, n=3)
-    new_model_dict = prune_model.prune_state_dict()
+    prune_model.prune_state_dict()
+    prune_model.prune_module_list()
 
     
-    after = count_attention_layers(new_model_dict, prefix="self_attn")
-    print(f"Layers after  prune: {after}")
+    after = count_attention_layers(prune_model.model.state_dict(), prefix="self_attn")
+    print(f"Number of State Dict Layers after prune: {after}")
     print(f"Prune Point / L Star: {prune_model.l_star}")
+    print("Module List After:")
+    print_module_layers(prune_model.model)
 
     
-    pruned_idxs = unique_layer_indices(new_model_dict)
+    pruned_idxs = unique_layer_indices(prune_model.model.state_dict())
 
     dropped_idxs = sorted(orig_idxs - pruned_idxs)
-    print("Dropped layer indices:", dropped_idxs)
-    print("Number dropped      :", len(dropped_idxs))
+    print("Dropped layer indices according to State Dict: ", dropped_idxs)
+    print("Number dropped according to State Dict: ", len(dropped_idxs))
 
     print("-------------------------------------------------------------") 
 
-    model.load_state_dict(new_model_dict, strict=False)
-    model.eval()
 
     metric_result = benchmark(model, tokenizer, evaluation_set, benchmark_arguments, generation_config)
     print(metric_result)

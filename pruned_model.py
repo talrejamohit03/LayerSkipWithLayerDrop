@@ -1,4 +1,5 @@
 import torch
+import torch.nn as nn
 from torch.utils.data import DataLoader
 import torch.nn.functional as F
 from transformers import AutoTokenizer, PreTrainedTokenizer
@@ -90,7 +91,7 @@ class PruneModel:
         L = len(self.model.model.layers) - self.n
         avg_dist = []
         for l in range(L):
-            a = acts[l][:, -1, :]    # last token
+            a = acts[l][:, -1, :]    
             b = acts[l+self.n][:, -1, :]
             avg_dist.append(self.angular_distance(a, b).mean().item() )
         return int(torch.tensor(avg_dist).argmin().item())
@@ -106,4 +107,14 @@ class PruneModel:
                 if self.l_star <= idx < self.l_star + self.n:
                     continue
             new_sd[k] = v
-        return new_sd
+        self.model.load_state_dict(new_sd, strict=False)
+        self.model.eval()
+
+    
+    def prune_module_list(self):
+        kept = [
+            blk for i, blk in enumerate(self.model.model.layers)
+            if not (self.l_star <= i < self.l_star + self.n)
+        ]
+        self.model.model.layers = nn.ModuleList(kept)
+        self.model.config.num_hidden_layers = len(kept)
