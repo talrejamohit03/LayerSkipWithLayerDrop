@@ -1,0 +1,274 @@
+---------------------------------------
+Begin Slurm Prolog: Apr-26-2025 23:19:33
+Job ID:    2539478
+User ID:   mtalreja6
+Account:   coc
+Job name:  LayerSkipWithLayerDrop
+Partition: ice-gpu
+QOS:       coc-ice
+---------------------------------------
+/var/lib/slurm/slurmd/job2539478/slurm_script: line 14: huggingface-cli: command not found
+/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/python
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    run(args)
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    result = agent.run()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    result = agent.run()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 255, in launch_agent
+    result = self._invoke_run(role)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    result = agent.run()
+    result = self._invoke_run(role)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 680, in run
+    self._rendezvous(worker_group)
+    result = self._invoke_run(role)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 829, in _invoke_run
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._initialize_workers(self._worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    self._rendezvous(worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 652, in _initialize_workers
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+    self._rendezvous(worker_group)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/metrics/api.py", line 124, in wrapper
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+    result = f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/agent/server/api.py", line 489, in _rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+    rdzv_info = spec.rdzv_handler.next_rendezvous()
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/rendezvous/static_tcp_rendezvous.py", line 66, in next_rendezvous
+    self._store = TCPStore(  # type: ignore[call-arg]
+RuntimeError: The server socket has failed to listen on any local network address. useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+srun: error: atl1-1-03-012-18-0: tasks 0-2: Exited with exit code 1
+/home/hice1/mtalreja6/.local/lib/python3.10/site-packages/torchvision/io/image.py:14: UserWarning: Failed to load image Python extension: '/home/hice1/mtalreja6/.local/lib/python3.10/site-packages/torchvision/image.so: undefined symbol: _ZN2at4_ops9from_file4callESt17basic_string_viewIcSt11char_traitsIcEESt8optionalIbES6_IlES6_IN3c1010ScalarTypeEES6_INS9_6LayoutEES6_INS9_6DeviceEES7_'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+2025-04-26:23:19:44,860 INFO     [modeling.py:1014] We will use 90% of the memory on device 0 for storing the model, and 10% for the buffer to avoid OOM. You can set `max_memory` in to a higher value to use more memory (at your own risk).
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:02<00:04,  2.34s/it]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:04<00:02,  2.31s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  2.02s/it]Loading checkpoint shards: 100%|██████████| 3/3 [00:06<00:00,  2.10s/it]
+2025-04-26:23:19:51,856 INFO     [evaluator.py:164] Setting random seed to 0 | Setting numpy seed to 1234 | Setting torch manual seed to 1234 | Setting fewshot manual seed to 1234
+2025-04-26:23:19:51,856 INFO     [evaluator.py:217] Using pre-initialized model
+2025-04-26:23:20:25,730 INFO     [task.py:415] Building contexts for mmlu_abstract_algebra on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 812.61it/s]
+2025-04-26:23:20:25,743 INFO     [task.py:415] Building contexts for mmlu_anatomy on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 828.77it/s]
+2025-04-26:23:20:25,756 INFO     [task.py:415] Building contexts for mmlu_astronomy on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 830.52it/s]
+2025-04-26:23:20:25,769 INFO     [task.py:415] Building contexts for mmlu_college_biology on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 839.25it/s]
+2025-04-26:23:20:25,782 INFO     [task.py:415] Building contexts for mmlu_college_chemistry on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 847.11it/s]
+2025-04-26:23:20:25,795 INFO     [task.py:415] Building contexts for mmlu_college_computer_science on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 834.19it/s]
+2025-04-26:23:20:25,808 INFO     [task.py:415] Building contexts for mmlu_college_mathematics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 838.69it/s]
+2025-04-26:23:20:25,821 INFO     [task.py:415] Building contexts for mmlu_college_physics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 848.98it/s]
+2025-04-26:23:20:25,833 INFO     [task.py:415] Building contexts for mmlu_computer_security on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 802.34it/s]
+2025-04-26:23:20:25,847 INFO     [task.py:415] Building contexts for mmlu_conceptual_physics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 831.91it/s]
+2025-04-26:23:20:25,859 INFO     [task.py:415] Building contexts for mmlu_electrical_engineering on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 846.43it/s]
+2025-04-26:23:20:25,872 INFO     [task.py:415] Building contexts for mmlu_elementary_mathematics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 838.31it/s]
+2025-04-26:23:20:25,885 INFO     [task.py:415] Building contexts for mmlu_high_school_biology on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 839.89it/s]
+2025-04-26:23:20:25,898 INFO     [task.py:415] Building contexts for mmlu_high_school_chemistry on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 858.38it/s]
+2025-04-26:23:20:25,910 INFO     [task.py:415] Building contexts for mmlu_high_school_computer_science on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 839.41it/s]
+2025-04-26:23:20:25,923 INFO     [task.py:415] Building contexts for mmlu_high_school_mathematics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 841.89it/s]
+2025-04-26:23:20:25,935 INFO     [task.py:415] Building contexts for mmlu_high_school_physics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 843.84it/s]
+2025-04-26:23:20:25,948 INFO     [task.py:415] Building contexts for mmlu_high_school_statistics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 838.24it/s]
+2025-04-26:23:20:25,961 INFO     [task.py:415] Building contexts for mmlu_machine_learning on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 830.51it/s]
+2025-04-26:23:20:25,974 INFO     [task.py:415] Building contexts for mmlu_business_ethics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 790.77it/s]
+2025-04-26:23:20:25,987 INFO     [task.py:415] Building contexts for mmlu_clinical_knowledge on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 825.73it/s]
+2025-04-26:23:20:26,000 INFO     [task.py:415] Building contexts for mmlu_college_medicine on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 710.04it/s]
+2025-04-26:23:20:26,054 INFO     [task.py:415] Building contexts for mmlu_global_facts on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 838.27it/s]
+2025-04-26:23:20:26,066 INFO     [task.py:415] Building contexts for mmlu_human_aging on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 836.94it/s]
+2025-04-26:23:20:26,079 INFO     [task.py:415] Building contexts for mmlu_management on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 771.28it/s]
+2025-04-26:23:20:26,106 INFO     [task.py:415] Building contexts for mmlu_marketing on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 839.75it/s]
+2025-04-26:23:20:26,119 INFO     [task.py:415] Building contexts for mmlu_medical_genetics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 817.25it/s]
+2025-04-26:23:20:26,132 INFO     [task.py:415] Building contexts for mmlu_miscellaneous on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 835.69it/s]
+2025-04-26:23:20:26,144 INFO     [task.py:415] Building contexts for mmlu_nutrition on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 842.04it/s]
+2025-04-26:23:20:26,157 INFO     [task.py:415] Building contexts for mmlu_professional_accounting on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 754.06it/s]
+2025-04-26:23:20:26,190 INFO     [task.py:415] Building contexts for mmlu_professional_medicine on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 788.83it/s]
+2025-04-26:23:20:26,218 INFO     [task.py:415] Building contexts for mmlu_virology on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 838.69it/s]
+2025-04-26:23:20:26,231 INFO     [task.py:415] Building contexts for mmlu_econometrics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 832.80it/s]
+2025-04-26:23:20:26,244 INFO     [task.py:415] Building contexts for mmlu_high_school_geography on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 829.88it/s]
+2025-04-26:23:20:26,256 INFO     [task.py:415] Building contexts for mmlu_high_school_government_and_politics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 844.89it/s]
+2025-04-26:23:20:26,269 INFO     [task.py:415] Building contexts for mmlu_high_school_macroeconomics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 830.88it/s]
+2025-04-26:23:20:26,282 INFO     [task.py:415] Building contexts for mmlu_high_school_microeconomics on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 838.27it/s]
+2025-04-26:23:20:26,295 INFO     [task.py:415] Building contexts for mmlu_high_school_psychology on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 763.81it/s]
+2025-04-26:23:20:26,319 INFO     [task.py:415] Building contexts for mmlu_human_sexuality on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 837.74it/s]
+2025-04-26:23:20:26,332 INFO     [task.py:415] Building contexts for mmlu_professional_psychology on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 787.51it/s]
+2025-04-26:23:20:26,353 INFO     [task.py:415] Building contexts for mmlu_public_relations on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 847.49it/s]
+2025-04-26:23:20:26,366 INFO     [task.py:415] Building contexts for mmlu_security_studies on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 831.44it/s]
+2025-04-26:23:20:26,379 INFO     [task.py:415] Building contexts for mmlu_sociology on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 841.08it/s]
+2025-04-26:23:20:26,392 INFO     [task.py:415] Building contexts for mmlu_us_foreign_policy on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 847.13it/s]
+2025-04-26:23:20:26,404 INFO     [task.py:415] Building contexts for mmlu_formal_logic on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 815.63it/s]
+2025-04-26:23:20:26,418 INFO     [task.py:415] Building contexts for mmlu_high_school_european_history on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 779.93it/s]
+2025-04-26:23:20:26,436 INFO     [task.py:415] Building contexts for mmlu_high_school_us_history on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 805.53it/s]
+2025-04-26:23:20:26,458 INFO     [task.py:415] Building contexts for mmlu_high_school_world_history on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 760.10it/s]
+2025-04-26:23:20:26,489 INFO     [task.py:415] Building contexts for mmlu_international_law on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 843.33it/s]
+2025-04-26:23:20:26,502 INFO     [task.py:415] Building contexts for mmlu_jurisprudence on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 872.27it/s]
+2025-04-26:23:20:26,514 INFO     [task.py:415] Building contexts for mmlu_logical_fallacies on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 852.15it/s]
+2025-04-26:23:20:26,526 INFO     [task.py:415] Building contexts for mmlu_moral_disputes on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 855.18it/s]
+2025-04-26:23:20:26,539 INFO     [task.py:415] Building contexts for mmlu_moral_scenarios on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 853.63it/s]
+2025-04-26:23:20:26,551 INFO     [task.py:415] Building contexts for mmlu_philosophy on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 860.58it/s]
+2025-04-26:23:20:26,564 INFO     [task.py:415] Building contexts for mmlu_prehistory on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 850.08it/s]
+2025-04-26:23:20:26,576 INFO     [task.py:415] Building contexts for mmlu_professional_law on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 839.35it/s]
+2025-04-26:23:20:26,597 INFO     [task.py:415] Building contexts for mmlu_world_religions on rank 0...
+  0%|          | 0/10 [00:00<?, ?it/s]100%|██████████| 10/10 [00:00<00:00, 849.14it/s]
+2025-04-26:23:20:26,609 INFO     [evaluator.py:489] Running loglikelihood requests
+Running loglikelihood requests:   0%|          | 0/2280 [00:00<?, ?it/s]Running loglikelihood requests:   0%|          | 1/2280 [00:00<07:28,  5.08it/s]Running loglikelihood requests:   0%|          | 9/2280 [00:00<01:03, 35.85it/s]Running loglikelihood requests:   1%|          | 25/2280 [00:00<00:28, 78.15it/s]Running loglikelihood requests:   2%|▏         | 45/2280 [00:00<00:19, 115.95it/s]Running loglikelihood requests:   3%|▎         | 65/2280 [00:00<00:15, 140.87it/s]Running loglikelihood requests:   4%|▎         | 85/2280 [00:00<00:13, 158.35it/s]Running loglikelihood requests:   5%|▍         | 105/2280 [00:00<00:12, 169.51it/s]Running loglikelihood requests:   5%|▌         | 125/2280 [00:00<00:12, 177.97it/s]Running loglikelihood requests:   6%|▋         | 146/2280 [00:01<00:11, 187.58it/s]Running loglikelihood requests:   7%|▋         | 166/2280 [00:01<00:11, 186.98it/s]Running loglikelihood requests:   8%|▊         | 185/2280 [00:01<00:11, 185.93it/s]Running loglikelihood requests:   9%|▉         | 205/2280 [00:01<00:11, 186.15it/s]Running loglikelihood requests:  10%|▉         | 225/2280 [00:01<00:11, 185.89it/s]Running loglikelihood requests:  11%|█         | 245/2280 [00:01<00:10, 187.23it/s]Running loglikelihood requests:  12%|█▏        | 265/2280 [00:01<00:10, 188.41it/s]Running loglikelihood requests:  12%|█▎        | 285/2280 [00:01<00:10, 187.92it/s]Running loglikelihood requests:  13%|█▎        | 305/2280 [00:01<00:10, 188.29it/s]Running loglikelihood requests:  14%|█▍        | 325/2280 [00:01<00:10, 190.30it/s]Running loglikelihood requests:  15%|█▌        | 345/2280 [00:02<00:10, 190.47it/s]Running loglikelihood requests:  16%|█▌        | 365/2280 [00:02<00:10, 189.42it/s]Running loglikelihood requests:  17%|█▋        | 385/2280 [00:02<00:10, 188.66it/s]Running loglikelihood requests:  18%|█▊        | 405/2280 [00:02<00:09, 189.92it/s]Running loglikelihood requests:  19%|█▊        | 425/2280 [00:02<00:09, 192.29it/s]Running loglikelihood requests:  20%|█▉        | 445/2280 [00:02<00:09, 192.77it/s]Running loglikelihood requests:  20%|██        | 465/2280 [00:02<00:09, 191.19it/s]Running loglikelihood requests:  21%|██▏       | 485/2280 [00:02<00:09, 189.69it/s]Running loglikelihood requests:  22%|██▏       | 505/2280 [00:02<00:09, 190.23it/s]Running loglikelihood requests:  23%|██▎       | 525/2280 [00:03<00:09, 190.42it/s]Running loglikelihood requests:  24%|██▍       | 545/2280 [00:03<00:09, 191.31it/s]Running loglikelihood requests:  25%|██▍       | 565/2280 [00:03<00:08, 193.37it/s]Running loglikelihood requests:  26%|██▌       | 585/2280 [00:03<00:10, 155.72it/s]Running loglikelihood requests:  27%|██▋       | 605/2280 [00:03<00:10, 163.27it/s]Running loglikelihood requests:  27%|██▋       | 625/2280 [00:03<00:09, 172.13it/s]Running loglikelihood requests:  28%|██▊       | 649/2280 [00:03<00:08, 181.28it/s]Running loglikelihood requests:  29%|██▉       | 669/2280 [00:03<00:08, 184.46it/s]Running loglikelihood requests:  30%|███       | 689/2280 [00:03<00:08, 183.70it/s]Running loglikelihood requests:  31%|███       | 709/2280 [00:04<00:08, 183.41it/s]Running loglikelihood requests:  32%|███▏      | 729/2280 [00:04<00:08, 185.16it/s]Running loglikelihood requests:  33%|███▎      | 749/2280 [00:04<00:08, 187.25it/s]Running loglikelihood requests:  34%|███▎      | 769/2280 [00:04<00:07, 189.24it/s]Running loglikelihood requests:  35%|███▍      | 789/2280 [00:04<00:07, 187.06it/s]Running loglikelihood requests:  35%|███▌      | 809/2280 [00:04<00:07, 185.90it/s]Running loglikelihood requests:  36%|███▋      | 829/2280 [00:04<00:07, 184.89it/s]Running loglikelihood requests:  37%|███▋      | 849/2280 [00:04<00:07, 186.11it/s]Running loglikelihood requests:  38%|███▊      | 869/2280 [00:04<00:07, 186.93it/s]Running loglikelihood requests:  39%|███▉      | 889/2280 [00:05<00:07, 187.93it/s]Running loglikelihood requests:  40%|███▉      | 909/2280 [00:05<00:07, 185.90it/s]Running loglikelihood requests:  41%|████      | 929/2280 [00:05<00:07, 186.37it/s]Running loglikelihood requests:  42%|████▏     | 949/2280 [00:05<00:07, 184.72it/s]Running loglikelihood requests:  42%|████▎     | 969/2280 [00:05<00:07, 185.26it/s]Running loglikelihood requests:  43%|████▎     | 989/2280 [00:05<00:06, 184.64it/s]Running loglikelihood requests:  44%|████▍     | 1009/2280 [00:05<00:06, 185.28it/s]Running loglikelihood requests:  45%|████▌     | 1029/2280 [00:05<00:06, 185.66it/s]Running loglikelihood requests:  46%|████▌     | 1049/2280 [00:05<00:06, 183.50it/s]Running loglikelihood requests:  47%|████▋     | 1069/2280 [00:06<00:06, 184.60it/s]Running loglikelihood requests:  48%|████▊     | 1089/2280 [00:06<00:06, 185.80it/s]Running loglikelihood requests:  49%|████▊     | 1109/2280 [00:06<00:06, 186.98it/s]Running loglikelihood requests:  50%|████▉     | 1129/2280 [00:06<00:06, 185.52it/s]Running loglikelihood requests:  50%|█████     | 1149/2280 [00:06<00:06, 186.03it/s]Running loglikelihood requests:  51%|█████▏    | 1169/2280 [00:06<00:05, 185.86it/s]Running loglikelihood requests:  52%|█████▏    | 1189/2280 [00:06<00:05, 185.65it/s]Running loglikelihood requests:  53%|█████▎    | 1209/2280 [00:06<00:05, 184.28it/s]Running loglikelihood requests:  54%|█████▍    | 1229/2280 [00:06<00:05, 185.86it/s]Running loglikelihood requests:  55%|█████▍    | 1249/2280 [00:06<00:05, 186.97it/s]Running loglikelihood requests:  56%|█████▌    | 1269/2280 [00:07<00:05, 187.21it/s]Running loglikelihood requests:  57%|█████▋    | 1289/2280 [00:07<00:05, 185.71it/s]Running loglikelihood requests:  57%|█████▋    | 1309/2280 [00:07<00:05, 186.46it/s]Running loglikelihood requests:  58%|█████▊    | 1329/2280 [00:07<00:05, 185.74it/s]Running loglikelihood requests:  59%|█████▉    | 1349/2280 [00:07<00:04, 186.58it/s]Running loglikelihood requests:  60%|██████    | 1369/2280 [00:07<00:04, 186.49it/s]Running loglikelihood requests:  61%|██████    | 1389/2280 [00:07<00:04, 185.57it/s]Running loglikelihood requests:  62%|██████▏   | 1409/2280 [00:07<00:04, 183.55it/s]Running loglikelihood requests:  63%|██████▎   | 1429/2280 [00:07<00:04, 182.00it/s]Running loglikelihood requests:  64%|██████▎   | 1449/2280 [00:08<00:04, 182.53it/s]Running loglikelihood requests:  64%|██████▍   | 1469/2280 [00:08<00:04, 187.25it/s]Running loglikelihood requests:  65%|██████▌   | 1489/2280 [00:08<00:04, 187.64it/s]Running loglikelihood requests:  66%|██████▌   | 1509/2280 [00:08<00:04, 186.75it/s]Running loglikelihood requests:  67%|██████▋   | 1529/2280 [00:08<00:04, 184.64it/s]Running loglikelihood requests:  68%|██████▊   | 1549/2280 [00:08<00:03, 183.29it/s]Running loglikelihood requests:  69%|██████▉   | 1569/2280 [00:08<00:03, 184.27it/s]Running loglikelihood requests:  70%|██████▉   | 1589/2280 [00:08<00:03, 184.87it/s]Running loglikelihood requests:  71%|███████   | 1609/2280 [00:08<00:03, 185.52it/s]Running loglikelihood requests:  71%|███████▏  | 1629/2280 [00:09<00:03, 182.99it/s]Running loglikelihood requests:  72%|███████▏  | 1649/2280 [00:09<00:03, 181.95it/s]Running loglikelihood requests:  73%|███████▎  | 1669/2280 [00:09<00:03, 181.39it/s]Running loglikelihood requests:  74%|███████▍  | 1689/2280 [00:09<00:03, 182.73it/s]Running loglikelihood requests:  75%|███████▍  | 1709/2280 [00:09<00:03, 183.80it/s]Running loglikelihood requests:  76%|███████▌  | 1729/2280 [00:09<00:03, 182.28it/s]Running loglikelihood requests:  77%|███████▋  | 1749/2280 [00:09<00:02, 180.81it/s]Running loglikelihood requests:  78%|███████▊  | 1769/2280 [00:09<00:02, 181.15it/s]Running loglikelihood requests:  78%|███████▊  | 1789/2280 [00:09<00:02, 182.49it/s]Running loglikelihood requests:  79%|███████▉  | 1809/2280 [00:10<00:02, 181.28it/s]Running loglikelihood requests:  80%|████████  | 1829/2280 [00:10<00:02, 182.09it/s]Running loglikelihood requests:  81%|████████  | 1849/2280 [00:10<00:02, 184.27it/s]Running loglikelihood requests:  82%|████████▏ | 1869/2280 [00:10<00:02, 186.67it/s]Running loglikelihood requests:  83%|████████▎ | 1889/2280 [00:10<00:02, 184.52it/s]Running loglikelihood requests:  84%|████████▎ | 1909/2280 [00:10<00:02, 181.93it/s]Running loglikelihood requests:  85%|████████▍ | 1929/2280 [00:10<00:01, 183.12it/s]Running loglikelihood requests:  85%|████████▌ | 1949/2280 [00:10<00:01, 185.83it/s]Running loglikelihood requests:  86%|████████▋ | 1969/2280 [00:10<00:01, 187.36it/s]Running loglikelihood requests:  87%|████████▋ | 1989/2280 [00:10<00:01, 184.96it/s]Running loglikelihood requests:  88%|████████▊ | 2009/2280 [00:11<00:01, 183.90it/s]Running loglikelihood requests:  89%|████████▉ | 2029/2280 [00:11<00:01, 185.90it/s]Running loglikelihood requests:  90%|████████▉ | 2049/2280 [00:11<00:01, 188.98it/s]Running loglikelihood requests:  91%|█████████ | 2069/2280 [00:11<00:01, 189.17it/s]Running loglikelihood requests:  92%|█████████▏| 2089/2280 [00:11<00:01, 186.08it/s]Running loglikelihood requests:  92%|█████████▎| 2109/2280 [00:11<00:00, 183.97it/s]Running loglikelihood requests:  93%|█████████▎| 2129/2280 [00:11<00:00, 184.22it/s]Running loglikelihood requests:  94%|█████████▍| 2149/2280 [00:11<00:00, 186.05it/s]Running loglikelihood requests:  95%|█████████▌| 2169/2280 [00:11<00:00, 186.11it/s]Running loglikelihood requests:  96%|█████████▌| 2189/2280 [00:12<00:00, 184.80it/s]Running loglikelihood requests:  97%|█████████▋| 2209/2280 [00:12<00:00, 182.77it/s]Running loglikelihood requests:  98%|█████████▊| 2229/2280 [00:12<00:00, 182.91it/s]Running loglikelihood requests:  99%|█████████▊| 2249/2280 [00:12<00:00, 184.85it/s]Running loglikelihood requests: 100%|█████████▉| 2269/2280 [00:12<00:00, 186.35it/s]Running loglikelihood requests: 100%|██████████| 2280/2280 [00:12<00:00, 181.65it/s]
+{'mmlu': {'acc,none': 0.42105263157894735, 'acc_stderr,none': 0.020071347721322238, 'alias': 'mmlu'}, 'mmlu_humanities': {'acc,none': 0.4461538461538462, 'acc_stderr,none': 0.04336290903919939, 'alias': ' - humanities'}, 'mmlu_formal_logic': {'alias': '  - formal_logic', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_high_school_european_history': {'alias': '  - high_school_european_history', 'acc,none': 0.4, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_high_school_us_history': {'alias': '  - high_school_us_history', 'acc,none': 0.6, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_high_school_world_history': {'alias': '  - high_school_world_history', 'acc,none': 0.6, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_international_law': {'alias': '  - international_law', 'acc,none': 0.7, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_jurisprudence': {'alias': '  - jurisprudence', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519464}, 'mmlu_logical_fallacies': {'alias': '  - logical_fallacies', 'acc,none': 0.6, 'acc_stderr,none': 0.1632993161855452}, 'mmlu_moral_disputes': {'alias': '  - moral_disputes', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_moral_scenarios': {'alias': '  - moral_scenarios', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_philosophy': {'alias': '  - philosophy', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_prehistory': {'alias': '  - prehistory', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519464}, 'mmlu_professional_law': {'alias': '  - professional_law', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_world_religions': {'alias': '  - world_religions', 'acc,none': 0.6, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_other': {'acc,none': 0.4230769230769231, 'acc_stderr,none': 0.04267517173613651, 'alias': ' - other'}, 'mmlu_business_ethics': {'alias': '  - business_ethics', 'acc,none': 0.6, 'acc_stderr,none': 0.1632993161855452}, 'mmlu_clinical_knowledge': {'alias': '  - clinical_knowledge', 'acc,none': 0.4, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_college_medicine': {'alias': '  - college_medicine', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_global_facts': {'alias': '  - global_facts', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_human_aging': {'alias': '  - human_aging', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_management': {'alias': '  - management', 'acc,none': 0.4, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_marketing': {'alias': '  - marketing', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_medical_genetics': {'alias': '  - medical_genetics', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_miscellaneous': {'alias': '  - miscellaneous', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_nutrition': {'alias': '  - nutrition', 'acc,none': 0.8, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_professional_accounting': {'alias': '  - professional_accounting', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_professional_medicine': {'alias': '  - professional_medicine', 'acc,none': 0.6, 'acc_stderr,none': 0.1632993161855452}, 'mmlu_virology': {'alias': '  - virology', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519464}, 'mmlu_social_sciences': {'acc,none': 0.4583333333333333, 'acc_stderr,none': 0.043301270189221926, 'alias': ' - social sciences'}, 'mmlu_econometrics': {'alias': '  - econometrics', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519464}, 'mmlu_high_school_geography': {'alias': '  - high_school_geography', 'acc,none': 0.1, 'acc_stderr,none': 0.09999999999999999}, 'mmlu_high_school_government_and_politics': {'alias': '  - high_school_government_and_politics', 'acc,none': 0.7, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_high_school_macroeconomics': {'alias': '  - high_school_macroeconomics', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519464}, 'mmlu_high_school_microeconomics': {'alias': '  - high_school_microeconomics', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_high_school_psychology': {'alias': '  - high_school_psychology', 'acc,none': 0.4, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_human_sexuality': {'alias': '  - human_sexuality', 'acc,none': 0.8, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_professional_psychology': {'alias': '  - professional_psychology', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_public_relations': {'alias': '  - public_relations', 'acc,none': 0.8, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_security_studies': {'alias': '  - security_studies', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_sociology': {'alias': '  - sociology', 'acc,none': 0.4, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_us_foreign_policy': {'alias': '  - us_foreign_policy', 'acc,none': 0.6, 'acc_stderr,none': 0.1632993161855452}, 'mmlu_stem': {'acc,none': 0.37894736842105264, 'acc_stderr,none': 0.033837371091203355, 'alias': ' - stem'}, 'mmlu_abstract_algebra': {'alias': '  - abstract_algebra', 'acc,none': 0.0, 'acc_stderr,none': 0.0}, 'mmlu_anatomy': {'alias': '  - anatomy', 'acc,none': 0.6, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_astronomy': {'alias': '  - astronomy', 'acc,none': 0.4, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_college_biology': {'alias': '  - college_biology', 'acc,none': 0.6, 'acc_stderr,none': 0.1632993161855452}, 'mmlu_college_chemistry': {'alias': '  - college_chemistry', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_college_computer_science': {'alias': '  - college_computer_science', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_college_mathematics': {'alias': '  - college_mathematics', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519464}, 'mmlu_college_physics': {'alias': '  - college_physics', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_computer_security': {'alias': '  - computer_security', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_conceptual_physics': {'alias': '  - conceptual_physics', 'acc,none': 0.4, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_electrical_engineering': {'alias': '  - electrical_engineering', 'acc,none': 0.3, 'acc_stderr,none': 0.15275252316519466}, 'mmlu_elementary_mathematics': {'alias': '  - elementary_mathematics', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_high_school_biology': {'alias': '  - high_school_biology', 'acc,none': 0.9, 'acc_stderr,none': 0.09999999999999999}, 'mmlu_high_school_chemistry': {'alias': '  - high_school_chemistry', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_high_school_computer_science': {'alias': '  - high_school_computer_science', 'acc,none': 0.6, 'acc_stderr,none': 0.16329931618554522}, 'mmlu_high_school_mathematics': {'alias': '  - high_school_mathematics', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}, 'mmlu_high_school_physics': {'alias': '  - high_school_physics', 'acc,none': 0.4, 'acc_stderr,none': 0.1632993161855452}, 'mmlu_high_school_statistics': {'alias': '  - high_school_statistics', 'acc,none': 0.5, 'acc_stderr,none': 0.16666666666666666}, 'mmlu_machine_learning': {'alias': '  - machine_learning', 'acc,none': 0.2, 'acc_stderr,none': 0.13333333333333333}}
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/eval.py", line 449, in <module>
+[rank0]:     main(args, eval_arguments, generation_config)
+[rank0]:   File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/eval.py", line 429, in main
+[rank0]:     wrap.metric_result.pop("predicted_text")
+[rank0]: AttributeError: 'NoneType' object has no attribute 'pop'
+E0426 23:20:43.540000 23456246740800 torch/distributed/elastic/multiprocessing/api.py:833] failed (exitcode: 1) local_rank: 0 (pid: 3500573) of binary: /storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/python
+Traceback (most recent call last):
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 348, in wrapper
+    return f(*args, **kwargs)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 901, in main
+    run(args)
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/run.py", line 892, in run
+    elastic_launch(
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 133, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 264, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+eval.py FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-04-26_23:20:43
+  host      : atl1-1-03-012-18-0.pace.gatech.edu
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 3500573)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+srun: error: atl1-1-03-012-18-0: task 3: Exited with exit code 1
+---------------------------------------
+Begin Slurm Epilog: Apr-26-2025 23:20:43
+Job ID:        2539478
+User ID:       mtalreja6
+Account:       coc
+Job name:      LayerSkipWithLayerDrop
+Resources:     cpu=4,gres/gpu:h100=1,mem=30G,node=1
+Rsrc Used:     cput=00:04:44,vmem=0,walltime=00:01:11,mem=32488K,energy_used=0
+Partition:     ice-gpu
+QOS:           coc-ice
+Nodes:         atl1-1-03-012-18-0
+---------------------------------------

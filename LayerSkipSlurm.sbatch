@@ -14,4 +14,4 @@ source ~/.bashrc
 huggingface-cli login --token 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
 conda activate /storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env         # Activate the conda environment
 which python    
-srun torchrun eval.py --model facebook/layerskip-llama2-7B     --tasks gsm8k     --limit 10     --generation_strategy self_speculative     --exit_layer 8     --num_speculations 6     --output_dir ./logs
+srun torchrun eval.py --model facebook/layerskip-llama2-7B     --tasks nq_open     --limit 10     --generation_strategy self_speculative     --exit_layer 8     --num_speculations 6     --output_dir ./logs

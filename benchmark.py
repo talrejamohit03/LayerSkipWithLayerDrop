@@ -270,7 +270,7 @@ def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_co
     print("**************************************************************")
 
     #call PruneModel to prune model's state_dict AND MODULE LIST
-    prune_model = PruneModel(model, evaluation_set, n=3)
+    prune_model = PruneModel(model, evaluation_set, n=7)
     prune_model.prune_state_dict()
     #prune_model.prune_module_list()
 
