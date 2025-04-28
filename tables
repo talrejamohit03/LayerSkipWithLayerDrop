@@ -28,29 +28,29 @@
 | xsum_summarization   | angular        | n=3     |                0.074646  |                0.0886682 |              0.016503    |                           0 |                      1323.5  |               0.903155 |
 
 === TIMING TABLE ===
-| dataset              | approach       | param   |   total_time_mean |   time_per_token_mean |   tokens_per_second_mean |
-|:---------------------|:---------------|:--------|------------------:|----------------------:|-------------------------:|
-| cnn_dm_lm            | base           |         |           9.62547 |             0.0204692 |                  48.98   |
-| cnn_dm_lm            | random_dropout | t=0.1   |          15.4738  |             0.0302222 |                  33.4717 |
-| cnn_dm_lm            | random_dropout | t=0.2   |          20.037   |             0.0402424 |                  25.1649 |
-| cnn_dm_lm            | angular        | n=1     |           8.44368 |             0.0211751 |                  47.78   |
-| cnn_dm_lm            | angular        | n=2     |           9.37895 |             0.0217472 |                  46.3216 |
-| cnn_dm_lm            | angular        | n=3     |           9.49914 |             0.0218602 |                  46.1752 |
-| cnn_dm_summarization | base           |         |          10.2664  |             0.0206398 |                  50.5325 |
-| cnn_dm_summarization | random_dropout | t=0.1   |          15.0471  |             0.029389  |                  34.2364 |
-| cnn_dm_summarization | random_dropout | t=0.2   |          18.5209  |             0.0361737 |                  28.1272 |
-| cnn_dm_summarization | angular        | n=1     |           8.43968 |             0.0184205 |                  54.9051 |
-| cnn_dm_summarization | angular        | n=2     |           8.79457 |             0.017934  |                  55.9994 |
-| cnn_dm_summarization | angular        | n=3     |           8.25559 |             0.0182303 |                  55.1262 |
-| human_eval           | base           |         |           7.09992 |             0.019794  |                  50.7016 |
-| human_eval           | random_dropout | t=0.1   |          16.257   |             0.0317519 |                  31.7847 |
-| human_eval           | random_dropout | t=0.2   |          24.1396  |             0.0471476 |                  21.7374 |
-| human_eval           | angular        | n=1     |           6.10357 |             0.0194489 |                  51.5894 |
-| human_eval           | angular        | n=2     |           8.38611 |             0.0236123 |                  47.9466 |
-| human_eval           | angular        | n=3     |           9.98241 |             0.0264145 |                  43.0466 |
-| xsum_summarization   | base           |         |           8.01545 |             0.0212587 |                  47.6437 |
-| xsum_summarization   | random_dropout | t=0.1   |          15.7608  |             0.0307828 |                  32.628  |
-| xsum_summarization   | random_dropout | t=0.2   |          19.9233  |             0.0389127 |                  26.3314 |
-| xsum_summarization   | angular        | n=1     |           7.53788 |             0.0207475 |                  48.7355 |
-| xsum_summarization   | angular        | n=2     |           7.46199 |             0.0206733 |                  48.81   |
-| xsum_summarization   | angular        | n=3     |           6.6849  |             0.019549  |                  51.8106 |
+| dataset                | approach         | param     |   total_time_mean |   time_per_token_mean |   tokens_per_second_mean |
+|:-----------------------|:-----------------|:----------|------------------:|----------------------:|-------------------------:|
+| cnn_dm_lm              | base             | nan       |          21.0389  |             0.0422545 |                  23.9067 |
+| cnn_dm_lm              | random_dropout   | t=0.1     |          15.4738  |             0.0302222 |                  33.4717 |
+| cnn_dm_lm              | random_dropout   | t=0.2     |          20.037   |             0.0402424 |                  25.1649 |
+| cnn_dm_lm              | angular          | n=1       |           8.44368 |             0.0211751 |                  47.78   |
+| cnn_dm_lm              | angular          | n=2       |           9.37895 |             0.0217472 |                  46.3216 |
+| cnn_dm_lm              | angular          | n=3       |           9.49914 |             0.0218602 |                  46.1752 |
+| cnn_dm_summarization   | base             | nan       |          19.447   |             0.0379824 |                  26.7208 |
+| cnn_dm_summarization   | random_dropout   | t=0.1     |          15.0471  |             0.029389  |                  34.2364 |
+| cnn_dm_summarization   | random_dropout   | t=0.2     |          18.5209  |             0.0361737 |                  28.1272 |
+| cnn_dm_summarization   | angular          | n=1       |           8.43968 |             0.0184205 |                  54.9051 |
+| cnn_dm_summarization   | angular          | n=2       |           8.79457 |             0.017934  |                  55.9994 |
+| cnn_dm_summarization   | angular          | n=3       |           8.25559 |             0.0182303 |                  55.1262 |
+| human_eval             | base             | nan       |          25.3466  |             0.049505  |                  20.6505 |
+| human_eval             | random_dropout   | t=0.1     |          16.257   |             0.0317519 |                  31.7847 |
+| human_eval             | random_dropout   | t=0.2     |          24.1396  |             0.0471476 |                  21.7374 |
+| human_eval             | angular          | n=1       |           6.10357 |             0.0194489 |                  51.5894 |
+| human_eval             | angular          | n=2       |           8.38611 |             0.0236123 |                  47.9466 |
+| human_eval             | angular          | n=3       |           9.98241 |             0.0264145 |                  43.0466 |
+| xsum_summarization     | base             | nan       |          20.9195  |             0.0408583 |                  25.0148 |
+| xsum_summarization     | random_dropout   | t=0.1     |          15.7608  |             0.0307828 |                  32.628  |
+| xsum_summarization     | random_dropout   | t=0.2     |          19.9233  |             0.0389127 |                  26.3314 |
+| xsum_summarization     | angular          | n=1       |           7.53788 |             0.0207475 |                  48.7355 |
+| xsum_summarization     | angular          | n=2       |           7.46199 |             0.0206733 |                  48.81   |
+| xsum_summarization     | angular          | n=3       |           6.6849  |             0.019549  |                  51.8106 |
