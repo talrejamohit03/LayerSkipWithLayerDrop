@@ -1,4 +1,6 @@
-# Experiments using LayerDrop and Layer Pruning on top of LayerSkipThis repository extends the [LayerSkip](https://arxiv.org/abs/2404.16710) codebase with **layer pruning experiments** using two approaches: **Angular Distance Pruning** and **Randomized Dropout Pruning**. The goal is to benchmark the impact of structured and random pruning on model accuracy and inference speed.
+# Experiments using LayerDrop and Layer Pruning on top of LayerSkip
+
+This repository extends the [LayerSkip](https://arxiv.org/abs/2404.16710) codebase with **layer pruning experiments** using two approaches: **Angular Distance Pruning** and **Randomized Dropout Pruning**. The goal is to benchmark the impact of structured and random pruning on model accuracy and inference speed.
 
 ---
 
