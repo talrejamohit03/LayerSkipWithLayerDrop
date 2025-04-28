@@ -50,6 +50,9 @@ class BenchmarkArguments:
     num_samples: Optional[int] = None
     n_shot: Optional[int] = 0
     template: Optional[str] = None
+    prune_method: str = "angular"  # "angular" or "random"
+    prune_n: int = 1
+    dropout_threshold: float = 0.1
 
 @dataclass
 class EvaluationExample:
@@ -256,7 +259,7 @@ def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_co
 
     model, tokenizer = load_model_and_tokenizer(args, device=device)
 
-
+    '''
     #initialize PruneModel class, set dropout_threshold for randomized dropout
     prune_model = PruneModel(model, evaluation_set, n=4)
 
@@ -273,7 +276,29 @@ def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_co
     verify_pruned_weights_angular_dist(prune_model, model)
 
     print("******************************************************")
+    '''
 
+    prune_model = PruneModel(
+        model, evaluation_set, 
+        n=benchmark_arguments.prune_n, 
+        dropout_threshold=benchmark_arguments.dropout_threshold
+    )
+
+    if benchmark_arguments.prune_method == "angular":
+        prune_model.angular_distance_prune()
+        print("******************************************************")
+        print("PRUNED LAYER NORMS (Angular Distance)")
+        verify_pruned_weights_angular_dist(prune_model, model)
+    elif benchmark_arguments.prune_method == "random":
+        prune_model.randomized_dropout()
+        print("******************************************************")
+        print("PRUNED LAYER NORMS (Randomized Dropout)")
+        verify_pruned_weights_randomized_dropout(prune_model, model)
+    else:
+        raise ValueError(f"Unknown prune_method: {benchmark_arguments.prune_method}")
+
+    print("******************************************************")
+    
 
     metric_result = benchmark(model, tokenizer, evaluation_set, benchmark_arguments, generation_config)
     print(metric_result)

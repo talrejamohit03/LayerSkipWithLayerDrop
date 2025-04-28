@@ -1,0 +1,32 @@
+
+torchrun benchmark.py --model facebook/layerskip-llama2-7B --dataset cnn_dm_summarization     --num_samples 20   --generation_strategy self_speculative     --exit_layer 31    --num_speculations 6     --output_dir ./logs/eval/  2>&1 | tee logs/cnn_dm_summarization_results_base
+sleep 1
+echo "====================="
+echo "====================="
+echo "====================="
+sleep 1
+
+#xsum_summarization cnn_dm_lm human_eval
+
+torchrun benchmark.py --model facebook/layerskip-llama2-7B --dataset xsum_summarization     --num_samples 20   --generation_strategy self_speculative     --exit_layer 31    --num_speculations 6     --output_dir ./logs/eval/  2>&1 | tee logs/xsum_results_base
+
+sleep 1
+echo "====================="
+echo "====================="
+echo "====================="
+sleep 1
+
+torchrun benchmark.py --model facebook/layerskip-llama2-7B --dataset cnn_dm_lm     --num_samples 20   --generation_strategy self_speculative     --exit_layer 31    --num_speculations 6     --output_dir ./logs/eval/  2>&1 | tee logs/cnn_dm_lm_results_base
+sleep 1
+echo "====================="
+echo "====================="
+echo "====================="
+sleep 1
+
+torchrun benchmark.py --model facebook/layerskip-llama2-7B --dataset human_eval     --num_samples 20   --generation_strategy self_speculative     --exit_layer 31    --num_speculations 6     --output_dir ./logs/eval/  2>&1 | tee logs/human_eval_results_base
+
+sleep 1
+echo "====================="
+echo "====================="
+echo "====================="
+sleep 1
