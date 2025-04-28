@@ -48,7 +48,7 @@ class PruneModel:
         return self.tokenizer(
             texts,
             return_tensors="pt",
-            padding=True,
+            padding="max_length",     
             truncation=True,
             max_length=512,     
         )

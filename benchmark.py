@@ -259,7 +259,7 @@ def main(args: Arguments, benchmark_arguments: BenchmarkArguments, generation_co
 
     #initialize PruneModel class, set dropout_threshold for randomized dropout
     prune_model = PruneModel(model, evaluation_set, n=4)
-    
+
     #choose angular distance or randomized drop here
     prune_model.angular_distance_prune()
     #prune_model.randomized_dropout()
