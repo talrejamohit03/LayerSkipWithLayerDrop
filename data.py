@@ -124,27 +124,54 @@ def prepare_cnn_dm_summarization_format(n_shot: int = 0, seed: int = 42, templat
         )
     return evaluation_data_points
 
-def prepare_xsum_summarization_format(n_shot: int = 0, seed: int = 42, template: str = None) -> List[EvaluationExample]:
+def prepare_xsum_summarization_format(
+    n_shot: int = 0,
+    seed: int = 42,
+    template: str = None
+) -> List[EvaluationExample]:
     prompt_shots = ""
+
+    # Build few-shot prompt if requested
     if n_shot > 0:
-        prompt_keys=["document", "summary"]
-        shots = load_dataset("xsum", split="train").shuffle(seed=seed).select(range(n_shot))
+        prompt_keys = ["document", "summary"]
+        shots = (
+            load_dataset(
+                "xsum",
+                split="train",
+                trust_remote_code=True
+            )
+            .shuffle(seed=seed)
+            .select(range(n_shot))
+        )
         for i in range(n_shot):
-            prompt = "Article: " + shots[i][prompt_keys[0]] + "\nSummary: " + shots[i][prompt_keys[1]].replace("\n", "") + "\n"
-            prompt_shots += prompt
+            doc = shots[i][prompt_keys[0]]
+            summ = shots[i][prompt_keys[1]].replace("\n", "")
+            prompt_shots += f"Article: {doc}\nSummary: {summ}\n"
         prompt_shots += "\n"
 
-    evaluation_data_points = []
-    for data_point in load_dataset('xsum', split='test'):
+    evaluation_data_points: List[EvaluationExample] = []
+
+    # Load test split with remote code trust
+    raw_test = load_dataset(
+        "xsum",
+        split="test",
+        trust_remote_code=True
+    )
+
+    for data_point in raw_test:
         article = data_point["document"]
         highlights = data_point["summary"]
-        prompt = apply_template(message=prompt_shots + f"Article: {article}\nSummary:", template=template) 
+        prompt = apply_template(
+            message=prompt_shots + f"Article: {article}\nSummary:",
+            template=template
+        )
         evaluation_data_points.append(
             EvaluationExample(
                 input=prompt,
                 output=f" {highlights}",
             )
         )
+
     return evaluation_data_points
 
 def prepare_human_eval(template: str = None) -> List[EvaluationExample]:
