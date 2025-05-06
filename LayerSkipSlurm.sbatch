@@ -11,7 +11,7 @@ cd $SLURM_SUBMIT_DIR                     # Change to working directory
 
 # module load anaconda3                    # Load module dependencies
 source ~/.bashrc
-huggingface-cli login --token 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
-conda activate /storage/ice1/4/0/mtalreja6/layerskip/LayerSkip/layer_skip_env         # Activate the conda environment
+huggingface-cli login --token 
+conda activate          # Activate the conda environment
 which python    
 srun torchrun eval.py --model facebook/layerskip-llama2-7B     --tasks gsm8k     --limit 10     --generation_strategy self_speculative     --exit_layer 8     --num_speculations 6     --output_dir ./logs
